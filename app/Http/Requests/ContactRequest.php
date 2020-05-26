@@ -30,7 +30,6 @@ class ContactRequest extends FormRequest
             'birthday' => 'required',
             'gender' => 'required',
             'email' => 'required|email',
-            'agree' => 'required|accepted',
         ];
     }
 
@@ -47,7 +46,6 @@ class ContactRequest extends FormRequest
             'gender.required' => 'O campo Sexo é obrigatório!',
             'email.required' => 'O campo Email é obrigatório!',
             'email.email' => 'Digite um Email válido!',
-            'agree' => 'Aceite o termo de responsabilidade!',
         ];
     }
 }

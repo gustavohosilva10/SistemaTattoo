@@ -147,14 +147,14 @@ class ContactsController extends Controller
                 $contact->anamnesis()->updateOrCreate($merge);
             endif;
         endforeach;
-
+        
         Flash::success('<i class="fas fa-check-circle"></i> O Contato <strong><i>' . $contact->present()->getFullName . '</strong></i> foi alterado corretamente!')->important();
         return redirect()->route('admin.contacts.edit', $id);
     }
 
     public function updateTattoo(TattooRequest $request)
     {
-      
+        
     }
 
     /**
