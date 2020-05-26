@@ -32,7 +32,6 @@ class CreateContactsTable extends Migration
             $table->string('state')->nullable();
             $table->string('number')->nullable();
             $table->date('register')->default(date('Y-m-d'));
-            $table->boolean('agree')->nullable();
         });
     }
 

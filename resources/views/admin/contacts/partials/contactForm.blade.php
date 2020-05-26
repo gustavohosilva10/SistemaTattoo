@@ -935,35 +935,6 @@
     </div>
 </div>
 
-<div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
-    <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-clipboard-check"></i> Termo de Responsabilidade</div>
-    <div class="card-body">
-        <div class="form-group row">
-            <div class="col-12">
-                <div class="custom-control custom-checkbox">
-                    {!! Form::checkbox('agree', null, null, [
-                        'class' => $errors->has('agree') ? 'custom-control-input is-invalid' : 'custom-control-input',
-                        'id' => 'agree',
-                        'required' => ''
-                    ]) !!}
-                    {!! Form::label('agree', 'Declaro que todas as informações acima são verídicas, e estou ciente dos riscos, autorizando o artista a realizar o trabalho.*',[
-                        'class' => 'custom-control-label',
-                        'id' => 'agree'
-                    ]) !!}
-                    <span class="invalid-feedback">
-                        <strong>
-                            @if ($errors->has('agree'))
-                                {{ $errors->first('agree') }}
-                            @else
-                                Aceite o termo de responsabilidade!
-                            @endif
-                        </strong>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Scripts -->
 @include('layouts.scripts.date')

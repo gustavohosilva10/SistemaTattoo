@@ -15,7 +15,7 @@ class Contact extends Model
     public $fillable = [
         'first_name', 'middle_name', 'last_name', 'avatar', 'birthday', 'gender', 'email', 'phone1',
         'phone2', 'zip_code', 'address', 'complement', 'strict', 'city', 'state', 'number', 'register',
-        'agree'
+
     ];
     protected $dates = ['birthday', 'register'];
 

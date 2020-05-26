@@ -154,7 +154,7 @@ class ContactsController extends Controller
 
     public function updateTattoo(TattooRequest $request)
     {
-        dd($request->all());
+      
     }
 
     /**
