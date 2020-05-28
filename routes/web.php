@@ -43,9 +43,9 @@ Route::middleware(['auth', 'web'])->group(function () {
             Route::get('{id}/editar', 'Admin\ContactsController@edit')->name('edit');
             Route::put('{id}/alterar', 'Admin\ContactsController@update')->name('update');
             Route::get('{id}/excluir', 'Admin\ContactsController@destroy')->name('destroy');
-            // Import
-            Route::get('importar', 'Admin\ImportCsvController@file')->name('file');
-            Route::post('processar', 'Admin\ImportCsvController@parseCsv')->name('parse');
+            // Contrato
+            Route::get('contract', 'Admin\ContractController@ContractCreate')->name('contract');
+           
             // Tattoo
             Route::name('tattoo.')->prefix('tattoo')->group(function () {
                 Route::post('salvar', 'Admin\ContactsController@storeTattoo')->name('storeTattoo');

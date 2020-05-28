@@ -37,15 +37,6 @@
                                             <td class="align-middle">
                                                 <dl>
                                                     <dt>
-                                                        @if ($contact->agree)
-                                                            <a data-toggle="tooltip" data-placement="bottom" title="Termos aceito">
-                                                                <i class="fas fa-check-square text-success"></i>
-                                                            </a>
-                                                        @else
-                                                            <a data-toggle="tooltip" data-placement="bottom" title="Termos pendente">
-                                                                <i class="fas fa-window-close text-danger"></i>
-                                                            </a>
-                                                        @endif
                                                         {{ $contact->present()->getFullName }}
                                                         <br />
                                                         {{ $contact->present()->getBirthday('age') }}

@@ -49,15 +49,6 @@
                     <div class="col-md-9">
                         <h1 class="display-4">
                             {{ $contact->present()->getFullName }}
-                            @if ($contact->agree)
-                                <a data-toggle="tooltip" data-placement="bottom" title="Termos aceito">
-                                    <i class="fas fa-check-square text-success"></i>
-                                </a>
-                            @else
-                                <a data-toggle="tooltip" data-placement="bottom" title="Termos pendente">
-                                    <i class="fas fa-window-close text-danger"></i>
-                                </a>
-                            @endif
                         </h1>
                         <h2>
                             @if($contact->present()->getBirthday('check'))
