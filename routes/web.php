@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('index' ,'Admin\LandingpageController@index')->name('index');
 Route::get('/', function () {
     if (Auth::guest())
         return view('auth.login');
