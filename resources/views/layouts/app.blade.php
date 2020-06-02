@@ -63,7 +63,7 @@
                                 <a class="dropdown-item" href="{{ route('admin.contacts.index') }}">Contatos</a>
                                 <a class="dropdown-item" href="{{ route('admin.contacts.create') }}">Novo</a>
                                 <a class="dropdown-item" href="{{ route('admin.contacts.contract') }}">Contrato</a>
-                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ route('admin.contacts.pageprincipal') }}">Landing Page</a>
                             </div>
                         </li>
                         <li class="nav-item">

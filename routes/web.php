@@ -45,7 +45,8 @@ Route::middleware(['auth', 'web'])->group(function () {
             Route::get('{id}/excluir', 'Admin\ContactsController@destroy')->name('destroy');
             // Contrato
             Route::get('contract', 'Admin\ContractController@ContractCreate')->name('contract');
-           
+            Route::get('pageprincipal', 'Admin\PageprincipalsController@Pageprincipal')->name('pageprincipal');
+            
             // Tattoo
             Route::name('tattoo.')->prefix('tattoo')->group(function () {
                 Route::post('salvar', 'Admin\ContactsController@storeTattoo')->name('storeTattoo');

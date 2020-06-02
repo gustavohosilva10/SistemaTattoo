@@ -12,12 +12,12 @@
     <link href="{{ asset('css/aos.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/fancybox.min.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fancybox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/magnific-popup.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mediaelementplayer.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/owl.carousel.min.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/owl.theme.default.min.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-reboot.min.css') }}" rel="stylesheet">
