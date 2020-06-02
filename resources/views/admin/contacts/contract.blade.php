@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Importar Contatos')
+@section('title', 'Contrato')
 <!-- Scripts -->
 @include('layouts.scripts.validate')
 
