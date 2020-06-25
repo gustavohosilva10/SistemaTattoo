@@ -4,82 +4,88 @@ namespace TattooOpen\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use TattooOpen\Http\Controllers\Controller;
+use TattooOpen\Contract;
+use Laracasts\Flash\Flash;
+use Redirect, DataTables;
 
 class ContractsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+    protected $contract;
+
+    public function __construct(){
+
+        $this->contract = Contract::first();
+
+    }
+
     public function index()
-    {
-        return view('admin.contracts.contract');
+    {   
+        return view('admin.contracts.index');
+        
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
-    {
-        //
+    { 
+        
+        return view('admin.contracts.contract')
+        ->with('contract', $this->contract);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'text_contract' => 'required',
+            
+        ]);
+        
+        $contract = Contract::create($request->all());
+        if($contract)
+        \Session::flash('mensagem_sucesso','A data de vencimeno '.$request->text_contract.' foi CRIADA com sucesso.');
+        else
+            \Session::flash('mensagem_erro','Houve erros ao processar sua solicitação.');
+
+        return Redirect::to('admin.contracts.index');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function list()
     {
-        //
+        $contract = Contract::all();
+        return DataTables::of($contract)->make(true);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        
+        $contract = Contract::findOrFail($id);
+
+        return view('admin.contracts.contract')
+        ->with('contract', $contract);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        
+        $validatedData = $request->validate([
+            'text_contract' => 'required',
+
+        ]);
+        
+        $contract = Contract::find($id);
+        $contract->update($request->all());
+
+        if($contract)
+        \Session::flash('mensagem_sucesso','A data de vencimeno '.$request->text_contract.' foi ATUALIZADA com sucesso.');
+        else
+            \Session::flash('mensagem_erro','Houve erros ao processar sua solicitação.');
+
+        return Redirect::to('admin.contracts.index');
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $text_contract = Contract::find($id);
+        return response()->json([ 'text_contract' => $text_contract->delete() ]);
     }
 }

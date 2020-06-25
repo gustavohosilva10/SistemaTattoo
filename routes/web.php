@@ -27,6 +27,14 @@ Route::middleware(['web', 'guest'])->group(function () {
 Route::middleware(['web'])->group(function () {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 });
+//Contratos
+Route::get('/contracts/index', 'Admin\ContractsController@index')->name('admin.contracts.index');
+Route::get('/contracts/contract/lista', 'Admin\ContractsController@list')->name('admin.contracts.contract.list');
+Route::get('/contracts/contract/novo', 'Admin\ContractsController@create')->name('admin.contracts.contract.novo');
+Route::get('/contracts/contract/{id}/editar', 'Admin\ContractsController@edit')->name('admin.contracts.contract.editar');
+Route::post('/contracts/contract/salvar', 'Admin\ContractsController@store')->name('admin.contracts.contract.salvar');
+Route::patch('/contracts/contract/{id}/atualizar', 'Admin\ContractsController@update')->name('admin.contracts.contract.atualizar');
+Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@destroy')->name('admin.contracts.contract.deletar');
 
 Route::middleware(['auth', 'web'])->group(function () {
     Route::name('admin.')->prefix('sistema')->group(function () {
@@ -43,9 +51,6 @@ Route::middleware(['auth', 'web'])->group(function () {
             Route::get('{id}/editar', 'Admin\ContactsController@edit')->name('edit');
             Route::put('{id}/alterar', 'Admin\ContactsController@update')->name('update');
             Route::get('{id}/excluir', 'Admin\ContactsController@destroy')->name('destroy');
-            
-            // Contrato
-            Route::get('contract', 'Admin\ContractController@Contractindex')->name('admin.contracts.contract');
             
             // Tattoo
             Route::name('tattoo.')->prefix('tattoo')->group(function () {

@@ -5,7 +5,8 @@ namespace TattooOpen;
 use Illuminate\Database\Eloquent\Model;
 
 class Contract extends Model
-{
+{   
+    protected $table = "contract";
     public $timestamps = false;
     public $fillable = ['text_contract'];
 
