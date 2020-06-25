@@ -14,17 +14,20 @@
                     <i class="fas fa-file"></i> Defina o seu contrato
                 </div>
                 <div class="card-body">
-                <legend> Regulamento do tatuador </legend>
-                    <div id="summernote"id="text_contract"
-                    name="text_contract">{{@$company->text_contract}}</div>
+                <div class="form-group col-md-12">
+                    <legend> Regulamento do tatuador </legend>
+                    <div id="summernote" id="text_contract" name="text_contract">{{@$company->text_contract}}</div>
+                    
+                </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-right">
-                    <a href="javascript:history.go(-1)" class="btn btn-danger">Cancelar</a>
-                    {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
-                </div>
+        <a href="javascript:history.go(-1)" class="btn btn-danger">Cancelar</a>
+        {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
+        {{ Form::close() }}
+    </div>
     <script>
     $('#summernote').summernote({
         placeholder: 'Hello stand alone ui',
