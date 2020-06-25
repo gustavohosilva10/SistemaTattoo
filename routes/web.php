@@ -43,9 +43,9 @@ Route::middleware(['auth', 'web'])->group(function () {
             Route::get('{id}/editar', 'Admin\ContactsController@edit')->name('edit');
             Route::put('{id}/alterar', 'Admin\ContactsController@update')->name('update');
             Route::get('{id}/excluir', 'Admin\ContactsController@destroy')->name('destroy');
+            
             // Contrato
-            Route::get('contract', 'Admin\ContractController@ContractCreate')->name('contract');
-            Route::get('pageprincipal', 'Admin\PageprincipalsController@Pageprincipal')->name('pageprincipal');
+            Route::get('contract', 'Admin\ContractController@Contractindex')->name('admin.contracts.contract');
             
             // Tattoo
             Route::name('tattoo.')->prefix('tattoo')->group(function () {
@@ -62,6 +62,9 @@ Route::middleware(['auth', 'web'])->group(function () {
                 Route::get('index', 'Admin\AutoCompleteController@index')->name('index');
                 Route::get('search', 'Admin\AutoCompleteController@search')->name('search');
             });
+            // Landing-page
+            Route::get('pageprincipal', 'Admin\PageprincipalsController@Pageprincipal')->name('pageprincipal');
+
         });
     });
 });
