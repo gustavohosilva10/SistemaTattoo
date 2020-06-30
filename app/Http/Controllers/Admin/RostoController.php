@@ -7,10 +7,10 @@ use TattooOpen\Http\Controllers\Controller;
 use TattooOpen\Session;
 use TattooOpen\Contact;
 
-class LandingpageController extends Controller{
+class RostoController extends Controller{
 
     public function index(){
-        return view('admin.front.index');
+        return view('admin.front.rosto');
     }
 }
      
