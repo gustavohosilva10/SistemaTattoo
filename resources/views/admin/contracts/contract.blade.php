@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('title', 'Contrato')
-<!-- Scripts -->
 
 @section('content')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
@@ -14,9 +13,13 @@
                     <i class="fas fa-file"></i> Defina o seu contrato
                 </div>
                 <div class="card-body">
+                
+                {{ Form::open(array('url' => '/contracts/contract/salvar')) }}
+                   
                 <div class="form-group col-md-12">
+                    
                     <legend> Regulamento do tatuador </legend>
-                    <div id="summernote" id="text_contract" name="text_contract">{{@$company->text_contract}}</div>
+                    <textarea id="summernote" id="text_contract" name="text_contract">{{@$contract->text_contract}}</textarea>
                     
                 </div>
                 </div>
@@ -28,9 +31,10 @@
         {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
         {{ Form::close() }}
     </div>
+
     <script>
     $('#summernote').summernote({
-        placeholder: 'Hello stand alone ui',
+        placeholder: 'Digite aqui',
         tabsize: 2,
         height: 120,
         toolbar: [
@@ -39,7 +43,6 @@
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],
-            ['insert', ['link', 'picture', 'video']],
             ['view', ['fullscreen', 'codeview', 'help']]
         ]
     });

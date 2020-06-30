@@ -21,7 +21,9 @@ class ContractsController extends Controller
 
     public function index()
     {   
-        return view('admin.contracts.index');
+        $contract = Contract::first();
+       
+        return view('admin.contracts.index')->with('contract', $contract);
         
     }
 
@@ -34,17 +36,18 @@ class ContractsController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'text_contract' => 'required',
+            
+            'text_contract' => 'required |unique',
             
         ]);
         
         $contract = Contract::create($request->all());
         if($contract)
-        \Session::flash('mensagem_sucesso','A data de vencimeno '.$request->text_contract.' foi CRIADA com sucesso.');
+        \Session::flash('mensagem_sucesso','O contrato foi CRIADO com sucesso.');
         else
             \Session::flash('mensagem_erro','Houve erros ao processar sua solicitação.');
 
-        return Redirect::to('admin.contracts.index');
+        return Redirect::to('/contracts/index');
 
     }
 
@@ -75,7 +78,7 @@ class ContractsController extends Controller
         $contract->update($request->all());
 
         if($contract)
-        \Session::flash('mensagem_sucesso','A data de vencimeno '.$request->text_contract.' foi ATUALIZADA com sucesso.');
+        \Session::flash('mensagem_sucesso','O '.$request->text_contract.' foi ATUALIZADO com sucesso.');
         else
             \Session::flash('mensagem_erro','Houve erros ao processar sua solicitação.');
 

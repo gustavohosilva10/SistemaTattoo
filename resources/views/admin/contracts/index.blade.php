@@ -33,7 +33,10 @@
 
                         <thead>
                             <tr>
-                                <th>Contrato</th>
+                                <td>Contrato
+                                    <p> {!!$contract->text_contract!!} </p>
+                                </td>
+                                
                                 <td class="align-middle">
                                     <a href="/contracts/contract/novo" data-toggle="tooltip"
                                         data-placement="bottom" title="Editar contato">
