@@ -35,6 +35,9 @@ Route::get('/contracts/contract/{id}/editar', 'Admin\ContractsController@edit')-
 Route::post('/contracts/contract/salvar', 'Admin\ContractsController@store')->name('admin.contracts.contract.salvar');
 Route::patch('/contracts/contract/{id}/atualizar', 'Admin\ContractsController@update')->name('admin.contracts.contract.atualizar');
 Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@destroy')->name('admin.contracts.contract.deletar');
+ 
+// Landing-page
+ Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
 
 Route::middleware(['auth', 'web'])->group(function () {
     Route::name('admin.')->prefix('sistema')->group(function () {
@@ -67,8 +70,7 @@ Route::middleware(['auth', 'web'])->group(function () {
                 Route::get('index', 'Admin\AutoCompleteController@index')->name('index');
                 Route::get('search', 'Admin\AutoCompleteController@search')->name('search');
             });
-            // Landing-page
-            Route::get('pageprincipal', 'Admin\PageprincipalsController@Pageprincipal')->name('pageprincipal');
+           
 
         });
     });

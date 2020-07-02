@@ -61,9 +61,9 @@
                             </a>
                             <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('admin.contacts.index') }}">Contatos</a>
-                                <a class="dropdown-item" href="{{ route('admin.contacts.create') }}">Novo</a>
+                                <a class="dropdown-item" href="{{ route('admin.contacts.create') }}">Adicionar contato</a>
                                 <a class="dropdown-item" href="{{ route('admin.contracts.index') }}">Contrato</a>
-                                <a class="dropdown-item" href="{{ route('admin.contacts.pageprincipal') }}">Landing Page</a>
+                                <a class="dropdown-item" href="{{ route('admin.pageprincipal.index')}}">Landing Page</a>
                             </div>
                         </li>
                         <li class="nav-item">
