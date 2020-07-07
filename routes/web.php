@@ -38,6 +38,7 @@ Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@dest
  
 // Landing-page
  Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
+ Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsController@store')->name('admin.pageprincipal.pageprincipal.salvar');
 
 Route::middleware(['auth', 'web'])->group(function () {
     Route::name('admin.')->prefix('sistema')->group(function () {
