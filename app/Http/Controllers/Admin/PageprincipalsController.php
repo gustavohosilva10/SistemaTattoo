@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use TattooOpen\Http\Controllers\Controller;
 use TattooOpen\Pageprincipals;
 use Laracasts\Flash\Flash;
-
+use Redirect;
 class PageprincipalsController extends Controller
 
 {

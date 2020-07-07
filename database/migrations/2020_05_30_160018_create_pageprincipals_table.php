@@ -17,6 +17,7 @@ class CreatePageprincipalsTable extends Migration
             $table->increments('id');
             $table->longText('base64_photo_principal')->nullable();
             $table->string('text_welcome_title')->nullable();
+            $table->string('text_welcome')->nullable();
             $table->longText('base64_image1')->nullable();
             $table->longText('base64_image2')->nullable();
             $table->longText('base64_image3')->nullable();

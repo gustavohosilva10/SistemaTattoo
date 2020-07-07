@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             {{ Form::open(array('url' => '/pageprincipal/pageprincipal/salvar')) }}
-            
+
             <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                 <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-camera"></i> Foto</div>
                 <div class="card-body py-5">
@@ -63,7 +63,7 @@
                     <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                         <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-camera"></i> Book de fotos</div>
                         <div class="card-body py-5">
-                            {!! Form::label('base64_image1', 'Primeira foto ', null, ['class' => 'control-label']) !!}
+                            {!! Form::label('base64_image1', 'Primeira foto (tamanho sugerido 800x533) ', null, ['class' => 'control-label']) !!}
                             <div class="fileinput-new row" data-provides="fileinput">
                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                   
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                                 <div class="card-body py-5" style="margin-top:-6%;">
-                                    {!! Form::label('base64_image2', 'Segunda foto ', null, ['class' => 'control-label']) !!}
+                                    {!! Form::label('base64_image2', 'Segunda foto (tamanho sugerido 800x533) ', null, ['class' => 'control-label']) !!}
                                     <div class="fileinput-new row" data-provides="fileinput">
                                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                           
@@ -117,7 +117,7 @@
                                     </div>
                                 </div>
                                         <div class="card-body py-5"style="margin-top:-6%;">
-                                            {!! Form::label('base64_image3', 'Terceira foto ', null, ['class' => 'control-label']) !!}
+                                            {!! Form::label('base64_image3', 'Terceira foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                             <div class="fileinput-new row" data-provides="fileinput">
                                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                   
@@ -144,7 +144,7 @@
                                             </div>
                                         </div>
                                                 <div class="card-body py-5" style="margin-top:-6%;">
-                                                    {!! Form::label('base64_image4', 'Quarta foto ', null, ['class' => 'control-label']) !!}
+                                                    {!! Form::label('base64_image4', 'Quarta foto (tamanho sugerido 800x533) ', null, ['class' => 'control-label']) !!}
                                                     <div class="fileinput-new row" data-provides="fileinput">
                                                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                           
@@ -171,7 +171,7 @@
                                                     </div>
                                                 </div>
                                                         <div class="card-body py-5"style="margin-top:-6%;">
-                                                            {!! Form::label('base64_image5', 'Quinta foto ', null, ['class' => 'control-label']) !!}
+                                                            {!! Form::label('base64_image5', 'Quinta foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                             <div class="fileinput-new row" data-provides="fileinput">
                                                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                   
@@ -198,7 +198,7 @@
                                                             </div>
                                                         </div>
                                                                 <div class="card-body py-5"style="margin-top:-6%;">
-                                                                    {!! Form::label('base64_image6', 'Sexta foto ', null, ['class' => 'control-label']) !!}
+                                                                    {!! Form::label('base64_image6', 'Sexta foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                     <div class="fileinput-new row" data-provides="fileinput">
                                                                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                           
@@ -225,7 +225,7 @@
                                                                     </div>
                                                                 </div>
                                                                         <div class="card-body py-5" style="margin-top:-6%;">
-                                                                            {!! Form::label('base64_image7', 'Setima foto ', null, ['class' => 'control-label']) !!}
+                                                                            {!! Form::label('base64_image7', 'Setima foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                             <div class="fileinput-new row" data-provides="fileinput">
                                                                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                   
@@ -252,7 +252,7 @@
                                                                             </div>
                                                                         </div>
                                                                                 <div class="card-body py-5"style="margin-top:-6%;">
-                                                                                    {!! Form::label('base64_image8', 'Oitava foto ', null, ['class' => 'control-label']) !!}
+                                                                                    {!! Form::label('base64_image8', 'Oitava foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                                     <div class="fileinput-new row" data-provides="fileinput">
                                                                                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                           
@@ -279,7 +279,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                         <div class="card-body py-5" style="margin-top:-6%;">
-                                                                                            {!! Form::label('base64_image9', 'Nona foto ', null, ['class' => 'control-label']) !!}
+                                                                                            {!! Form::label('base64_image9', 'Nona foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                                             <div class="fileinput-new row" data-provides="fileinput">
                                                                                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                                   
@@ -306,7 +306,7 @@
                                                                                             </div>
                                                                                         </div>
                                                                                                 <div class="card-body py-5" style="margin-top:-6%;" >
-                                                                                                    {!! Form::label('base64_image10', 'Décima foto ', null, ['class' => 'control-label']) !!}
+                                                                                                    {!! Form::label('base64_image10', 'Décima foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                                                     <div class="fileinput-new row" data-provides="fileinput">
                                                                                                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                                           
@@ -333,7 +333,7 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                                         <div class="card-body py-5" style="margin-top:-6%;">
-                                                                                                            {!! Form::label('base64_image11', 'Décima primeira foto ', null, ['class' => 'control-label']) !!}
+                                                                                                            {!! Form::label('base64_image11', 'Décima primeira foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                                                             <div class="fileinput-new row" data-provides="fileinput">
                                                                                                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                                                   
@@ -360,7 +360,7 @@
                                                                                                             </div>
                                                                                                         </div>
                                                                                                                 <div class="card-body py-5" style="margin-top:-6%;" >
-                                                                                                                    {!! Form::label('base64_image13', 'Décima terceira foto ', null, ['class' => 'control-label']) !!}
+                                                                                                                    {!! Form::label('base64_image13', 'Décima terceira foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                                                                     <div class="fileinput-new row" data-provides="fileinput">
                                                                                                                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                                                           
@@ -387,7 +387,7 @@
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                                         <div class="card-body py-5" style="margin-top:-6%;" >
-                                                                                                                            {!! Form::label('base64_image14', 'Décima quarta foto ', null, ['class' => 'control-label']) !!}
+                                                                                                                            {!! Form::label('base64_image14', 'Décima quarta foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                                                                             <div class="fileinput-new row" data-provides="fileinput">
                                                                                                                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                                                                   
@@ -414,7 +414,7 @@
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                                 <div class="card-body py-5 " style="margin-top:-6%;">
-                                                                                                                                    {!! Form::label('base64_image15', 'Décima quinta foto ', null, ['class' => 'control-label']) !!}
+                                                                                                                                    {!! Form::label('base64_image15', 'Décima quinta foto (tamanho sugerido 800x533)', null, ['class' => 'control-label']) !!}
                                                                                                                                     <div class="fileinput-new row" data-provides="fileinput">
                                                                                                                                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                                                                                                                           
@@ -446,7 +446,7 @@
                 <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                     <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-address-card"></i> Informações do autor</div>
                         <div class="card-body py-5 ">
-                            {!! Form::label('base64_photo_perfil', 'Foto do autor', null, ['class' => 'control-label']) !!}
+                            {!! Form::label('base64_photo_perfil', 'Foto do autor (tamanho sugerido 665x665)', null, ['class' => 'control-label']) !!}
                             <div class="fileinput-new row" data-provides="fileinput">
                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                   
@@ -489,7 +489,7 @@
                 <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                     <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-address-card"></i>Promoções </div>
                         <div class="card-body py-5 ">
-                            {!! Form::label('base64_promocao1', 'Imagem da promoção  1 ', null, ['class' => 'control-label']) !!}
+                            {!! Form::label('base64_promocao1', 'Imagem da promoção  1 (tamanho sugerido 500x400)', null, ['class' => 'control-label']) !!}
                             <div class="fileinput-new row" data-provides="fileinput">
                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                   
@@ -522,7 +522,7 @@
                         </div>
                        
                     <div class="card-body py-5 ">
-                        {!! Form::label('base64_promocao1', 'Imagem da promoção  2 ', null, ['class' => 'control-label']) !!}
+                        {!! Form::label('base64_promocao1', 'Imagem da promoção  2  (tamanho sugerido 500x400)', null, ['class' => 'control-label']) !!}
                         <div class="fileinput-new row" data-provides="fileinput">
                             <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                               
@@ -553,7 +553,7 @@
                                 {!! Form::text('name_perfil', null, ['class' => 'form-control']) !!}
                             </div>
                 <div class="card-body py-5 ">
-                    {!! Form::label('base64_promocao3', 'Imagem da promoção  3 ', null, ['class' => 'control-label']) !!}
+                    {!! Form::label('base64_promocao3', 'Imagem da promoção  3 (tamanho sugerido 500x400)', null, ['class' => 'control-label']) !!}
                     <div class="fileinput-new row" data-provides="fileinput">
                         <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                           
