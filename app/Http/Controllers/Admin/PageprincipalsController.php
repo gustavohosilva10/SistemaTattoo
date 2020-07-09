@@ -42,7 +42,7 @@ class PageprincipalsController extends Controller
         else
             \Session::flash('mensagem_erro','Houve erros ao processar sua solicitação.');
 
-        return Redirect::to('/index');
+        return Redirect::to('/sistema/painel');
 
     }
 

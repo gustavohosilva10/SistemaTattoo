@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Elit Photography&mdash; Onepage Website Template by Colorlib</title>
+    <title>Sistem</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -74,7 +74,7 @@
 
   <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
     <div class="site-logo">
-      <a href="index.html">Elit Photo</a>
+      <a href="index.html">Menu</a>
     </div>
     
     <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
@@ -84,8 +84,7 @@
         <li><a href="#section-home" class="nav-link">Home</a></li>
         <li><a href="#section-photos" class="nav-link">Fotos</a></li>
         <li><a href="#section-bio" class="nav-link">Sobre</a></li>
-        <li><a href="#section-blog" class="nav-link">Blog</a></li>
-        <li><a href="#section-contact" class="nav-link">Contact</a></li>
+        <li><a href="#section-blog" class="nav-link">Promoções</a></li>
       </ul>
       <ul class="social js-clone-nav">
         <li><a href="#"><span class="icon-facebook"></span></a></li>
@@ -96,8 +95,7 @@
   </header> 
 
   <main class="main-content">
-
-    <section class="site-section-hero bg-image" style="background-image: url('images/img_9.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
+    <section class="site-section-hero bg-image"  data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-7 text-center">
             <h1 class="text-white heading text-uppercase" data-aos="fade-up">Welcome</h1>
@@ -109,16 +107,13 @@
 
     <div class="container-fluid">
         
-      
-
-
       <section class="row align-items-stretch photos" id="section-photos">
         <div class="col-12">
         <div class="row align-items-stretch">
         
         <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="images/img_4.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+          <a href="{{$pageprincipal[0]->base64_image1}}" class="d-block photo-item" data-fancybox="gallery">
+            <img src="{{$pageprincipal[0]->base64_image1}}" alt="Image" class="img-fluid">
             <div class="photo-text-more">
               <span class="icon icon-search"></span>
             </div>

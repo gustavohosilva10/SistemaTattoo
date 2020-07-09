@@ -2,15 +2,18 @@
 
 namespace TattooOpen\Http\Controllers\Admin;
 
-use Illuminate\Support\Carbon;
 use TattooOpen\Http\Controllers\Controller;
+use TattooOpen\Pageprincipals;
 use TattooOpen\Session;
-use TattooOpen\Contact;
+
+use Illuminate\Http\Request;
 
 class RostoController extends Controller{
 
     public function index(){
-        return view('admin.front.rosto');
+
+        $pageprincipal  = Pageprincipals::all();
+        return view('admin.front.rosto')->with('pageprincipal', $pageprincipal);
     }
 }
      
