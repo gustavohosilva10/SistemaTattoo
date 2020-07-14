@@ -12,7 +12,7 @@ class RostoController extends Controller{
 
     public function index(){
 
-        $pageprincipal  = Pageprincipals::all();
+        $pageprincipal  = new Pageprincipals;
         return view('admin.front.rosto')->with('pageprincipal', $pageprincipal);
     }
 }

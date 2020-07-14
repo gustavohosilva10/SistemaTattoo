@@ -112,8 +112,8 @@
         <div class="row align-items-stretch">
         
         <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="{{$pageprincipal[0]->base64_image1}}" class="d-block photo-item" data-fancybox="gallery">
-            <img src="{{$pageprincipal[0]->base64_image1}}" alt="Image" class="img-fluid">
+          <a href=" {{$pageprincipal->base64_image1}}" class="d-block photo-item" data-fancybox="gallery">
+            <img src="{{$pageprincipal->base64_image1}}" alt="Image" class="img-fluid">
             <div class="photo-text-more">
               <span class="icon icon-search"></span>
             </div>

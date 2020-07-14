@@ -13,14 +13,6 @@ class PageprincipalsController extends Controller
     
     protected $pageprincipal;
 
-    
-    public function __construct(){
-
-        $this->pageprincipal = Pageprincipals::first();
-
-    }
-    
-
     public function index()
     {   
        
