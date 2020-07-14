@@ -28,14 +28,43 @@ class PageprincipalsController extends Controller
     }
     public function store(Request $request)
     {
+        $pageprincipal = Pageprincipals::create($request->all()); 
+
+        // Define o valor default para a variável que contém o nome da imagem 
+        $nameFile = null;
+
+        $d = 0;
+        foreach($request->base64_image as $images) {
+            $d++;
+        }
+        
+        // Verifica se informou o arquivo e se é válido
+        if ($request->hasFile('base64_image') && $request->file('base64_image')->isValid()) {
+            // Define um aleatório para o arquivo baseado no timestamps atual
+            $name = uniqid(date('HisYmd'));
+            // Recupera a extensão do arquivo
+            $extension = $request->base64_image->extension();
+            // Define finalmente o nome
+            $nameFile = "{$name}.{$extension}";
+            // Faz o upload:
+            $upload = $request->base64_image->storeAs('base64_image', $nameFile);
+            // Se tiver funcionado o arquivo foi armazenado em storage/app/public/categories/nomedinamicoarquivo.extensao
+            // Verifica se NÃO deu certo o upload (Redireciona de volta)
+            if ( !$upload ){
+                return "deu certo!";
+            }
+        }
+
+
+        /*
         $pageprincipal = Pageprincipals::create($request->all());
         if($pageprincipal)
-        \Session::flash('mensagem_sucesso','Sua landing page foi atualizada com sucesso.');
+            \Session::flash('mensagem_sucesso','Sua landing page foi atualizada com sucesso.');
         else
             \Session::flash('mensagem_erro','Houve erros ao processar sua solicitação.');
 
         return Redirect::to('/sistema/painel');
-
+        */
     }
 
 

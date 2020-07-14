@@ -37,7 +37,7 @@ class ContractsController extends Controller
     {
         $validatedData = $request->validate([
             
-            'text_contract' => 'required |unique',
+            'text_contract' => 'required',
             
         ]);
         

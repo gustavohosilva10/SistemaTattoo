@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            {{ Form::open(array('url' => '/pageprincipal/pageprincipal/salvar')) }}
+            {{ Form::open(array('url' => '/pageprincipal/pageprincipal/salvar', 'enctype' => "multipart/form-data")) }}
 
             <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                 <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-camera"></i> Foto</div>
@@ -56,14 +56,13 @@
                 </div>
                 </div>
             </div>
-        </div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                         <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-camera"></i> Book de fotos</div>
                         <div class="card-body py-5">
-                            {!! Form::label('base64_image1', 'Primeira foto (tamanho sugerido 800x533) ', null, ['class' => 'control-label']) !!}
+                            {!! Form::label('base64_image', 'Multiplas fotos (tamanho sugerido 800x533) ', null, ['class' => 'control-label']) !!}
                             <div class="fileinput-new row" data-provides="fileinput">
                                 <div class="col-sm-12 col-lg-10 col-xl-10 input-group">
                                   
@@ -73,14 +72,16 @@
                                     <span class="input-group-addon btn btn-primary btn-file">
                                         <span class="fileinput-new">Escolha a foto</span>
                                         <span class="fileinput-exists">Troque a foto</span>
-                                        {!! Form::file('base64_image1', [
-                                            'class' => $errors->has('base64_image1') ? 'custom-file-input form-control is-invalid' : 'custom-file-input form-control',
-                                            'id' => 'base64_image1'
+                                        {!! Form::file('base64_image[]', [
+                                            'class' => $errors->has('base64_image') ? 'custom-file-input form-control is-invalid' : 'custom-file-input form-control',
+                                            'id' => 'base64_image[]',
+                                            'accept' => 'image/*',
+                                            'multiple' => 'multiple'
                                         ]) !!}
                                         <span class="invalid-feedback">
                                             <strong>
-                                                @if ($errors->has('base64_image1'))
-                                                    {{ $errors->first('base64_image1') }}
+                                                @if ($errors->has('base64_image'))
+                                                    {{ $errors->first('base64_image') }}
                                                 @endif
                                             </strong>
                                         </span>
@@ -89,6 +90,7 @@
                                 </div>
                             </div>
                         </div>
+                    {{--
                                 <div class="card-body py-5" style="margin-top:-6%;">
                                     {!! Form::label('base64_image2', 'Segunda foto (tamanho sugerido 800x533) ', null, ['class' => 'control-label']) !!}
                                     <div class="fileinput-new row" data-provides="fileinput">
@@ -442,7 +444,7 @@
                                                                                                                                 </div>
                                                                                                                                 
                                                                                                                             </div>
-                                                                                                                            
+                                                                                                                        --}}
                 <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                     <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-address-card"></i> Informações do autor</div>
                         <div class="card-body py-5 ">
