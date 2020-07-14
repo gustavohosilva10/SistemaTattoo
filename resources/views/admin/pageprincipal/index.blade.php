@@ -56,9 +56,9 @@
                 </div>
                 </div>
             </div>
+        </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-12">
                     <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
                         <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-camera"></i> Book de fotos</div>
                         <div class="card-body py-5">
@@ -90,6 +90,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+    
                     {{--
                                 <div class="card-body py-5" style="margin-top:-6%;">
                                     {!! Form::label('base64_image2', 'Segunda foto (tamanho sugerido 800x533) ', null, ['class' => 'control-label']) !!}
@@ -445,8 +447,13 @@
                                                                                                                                 
                                                                                                                             </div>
                                                                                                                         --}}
-                <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
-                    <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-address-card"></i> Informações do autor</div>
+                    
+                    
+                                                                                                                        <div class="card text-dark bg-secondary border-dark shadow-lg mb-3">
+                                                                                                                            <div class="card-header text-light text-uppercase bg-dark font-weight-bold"><i class="fas fa-address-card"></i> Informações Pessoal</div>
+                                                                                                                            <div class="card-body">
+                    
+                 
                         <div class="card-body py-5 ">
                             {!! Form::label('base64_photo_perfil', 'Foto do autor (tamanho sugerido 665x665)', null, ['class' => 'control-label']) !!}
                             <div class="fileinput-new row" data-provides="fileinput">

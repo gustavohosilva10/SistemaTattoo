@@ -46,7 +46,7 @@ class PageprincipalsController extends Controller
                     $nameFile = "{$name}.{$extension}";
                     // Faz o upload:
                     $upload = $image->storeAs('gallery', $nameFile);
-                    dd($upload);
+                    
 
                     // Se tiver funcionado o arquivo foi armazenado em storage/app/public/categories/nomedinamicoarquivo.extensao
                     // Verifica se NÃO deu certo o upload (Redireciona de volta)
@@ -54,6 +54,13 @@ class PageprincipalsController extends Controller
                         return "deu certo!";
                     }
                 }
+                $pageprincipal = Pageprincipals::create($request->all());
+                if($pageprincipal)
+                    \Session::flash('mensagem_sucesso','Sua landing page foi atualizada com sucesso.');
+                else
+                    \Session::flash('mensagem_erro','Houve erros ao processar sua solicitação.');
+        
+                return Redirect::to('/sistema/painel');
 
             }
 
