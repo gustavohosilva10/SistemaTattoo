@@ -3,7 +3,6 @@
 namespace TattooOpen\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Laracasts\Flash\Flash;
 use Redirect;
 use TattooOpen\Http\Controllers\Controller;
 use TattooOpen\Pageprincipals;
@@ -28,7 +27,7 @@ class PageprincipalsController extends Controller
     }
     public function store(Request $request)
     {
-        $pageprincipal = Pageprincipals::create($request->all());
+        //$pageprincipal = Pageprincipals::create($request->all());
 
         // Define o valor default para a variável que contém o nome da imagem
         $nameFile = null;
@@ -52,19 +51,21 @@ class PageprincipalsController extends Controller
                     if (!$upload) {
                         return "deu certo!";
                     }
-                }
-                $pageprincipal = Pageprincipals::create($request->all());
-                if ($pageprincipal) {
-                    \Session::flash('mensagem_sucesso', 'Sua landing page foi atualizada com sucesso.');
-                } else {
-                    \Session::flash('mensagem_erro', 'Houve erros ao processar sua solicitação.');
-                }
 
-                return Redirect::to('/sistema/painel');
+                    $pageprincipal = Pageprincipals::create(['base64_image' => public_path('gallery') . DIRECTORY_SEPARATOR . $nameFile]);
+                }
 
             }
 
         }
+
+        if ($pageprincipal) {
+            \Session::flash('mensagem_sucesso', 'Sua landing page foi atualizada com sucesso.');
+        } else {
+            \Session::flash('mensagem_erro', 'Houve erros ao processar sua solicitação.');
+        }
+
+        return Redirect::to('/sistema/painel');
 
         /*
     $pageprincipal = Pageprincipals::create($request->all());

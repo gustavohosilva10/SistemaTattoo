@@ -13,6 +13,7 @@ class Pageprincipals extends Model
         'base64_photo_principal',
         'text_welcome_title',
         'text_welcome',
+        'base64_image',
         'base64_image1',
         'base64_image2',
         'base64_image3',
@@ -44,5 +45,5 @@ class Pageprincipals extends Model
         'question3',
         'answer3',
 
-     ];
+    ];
 }
