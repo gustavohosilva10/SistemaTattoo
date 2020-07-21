@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->foreign('id_promotion')
                 ->references('id')
                 ->on('promotions')
+                ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->timestamps();
         });
