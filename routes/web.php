@@ -35,7 +35,15 @@ Route::get('/contracts/contract/{id}/editar', 'Admin\ContractsController@edit')-
 Route::post('/contracts/contract/salvar', 'Admin\ContractsController@store')->name('admin.contracts.contract.salvar');
 Route::patch('/contracts/contract/{id}/atualizar', 'Admin\ContractsController@update')->name('admin.contracts.contract.atualizar');
 Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@destroy')->name('admin.contracts.contract.deletar');
+ //Book de fotos
+
+ Route::get('/', 'PostControlador@index');
+ Route::post('/', 'PostControlador@store');
+ Route::delete('/{id}', 'PostControlador@destroy');
+ Route::get('/download/{id}', 'PostControlador@download');
  
+
+
 // Landing-page
  Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
  Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsController@store')->name('admin.pageprincipal.pageprincipal.salvar');
