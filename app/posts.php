@@ -10,7 +10,7 @@ class posts extends Model
     public $timestamps = false;
     public $fillable = [
 
-        'base64_image_promotion',
+        'arquivo',
         'desciption_promotion',
     ];
 }

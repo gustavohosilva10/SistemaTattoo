@@ -37,9 +37,6 @@ class CreatePageprincipalsTable extends Migration
             $table->increments('id');
             $table->string('text_welcome_title');
             $table->string('text_welcome');
-            $table->string('base64_img_profile');
-            $table->string('name_perfil');
-            $table->string('text_perfil');
 
         });
     }

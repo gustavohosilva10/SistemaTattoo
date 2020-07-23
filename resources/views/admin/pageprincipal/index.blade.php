@@ -37,9 +37,21 @@
 
                     <div class="card text-dark bg-secondary border-dark shadow-lg mb-5">
                         <div class="card-header text-light text-uppercase bg-dark font-weight-bold">
-                            <i class="fas fa-file"></i> Bibliografia
+                            <i class="fas fa-file"> </i>  <i class="fas fa-camera"></i> Bibliografia
                             <span class="float-right">
-                                <a href="/contracts/contract/novo" class="btn py-0 px-0" data-toggle="tooltip"
+                                <a href="/bibliography/index" class="btn py-0 px-0" data-toggle="tooltip"
+                                    data-placement="bottom" title="Adicionar Contrato">
+                                    <i class="fas fa-pen-square text-warning"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="card text-dark bg-secondary border-dark shadow-lg mb-5">
+                        <div class="card-header text-light text-uppercase bg-dark font-weight-bold">
+                            <i class="fas fa-file"></i>  <i class="fas fa-camera"></i> Promoções
+                            <span class="float-right">
+                                <a href="/postes/index" class="btn py-0 px-0" data-toggle="tooltip"
                                     data-placement="bottom" title="Adicionar Contrato">
                                     <i class="fas fa-pen-square text-warning"></i>
                                 </a>

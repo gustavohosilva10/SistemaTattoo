@@ -9,11 +9,13 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-Route::get('index' ,'Admin\RostoController@index')->name('index');
+ */
+Route::get('index', 'Admin\RostoController@index')->name('index');
 Route::get('/', function () {
-    if (Auth::guest())
+    if (Auth::guest()) {
         return view('auth.login');
+    }
+
     return redirect()->route('admin.home');
 });
 
@@ -35,18 +37,21 @@ Route::get('/contracts/contract/{id}/editar', 'Admin\ContractsController@edit')-
 Route::post('/contracts/contract/salvar', 'Admin\ContractsController@store')->name('admin.contracts.contract.salvar');
 Route::patch('/contracts/contract/{id}/atualizar', 'Admin\ContractsController@update')->name('admin.contracts.contract.atualizar');
 Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@destroy')->name('admin.contracts.contract.deletar');
- //Book de fotos
+//Bibliografia
+Route::get('/bibliography/index', 'Admin\BibliographyController@index')->name('admin.bibliography.index');
+Route::post('/bibliography/index', 'Admin\BibliographyController@store');
+Route::delete('/bibliography/index/{id}', 'Admin\BibliographyController@destroy');
+Route::get('/bibliography/index/download/{id}', 'Admin\BibliographyController@download');
 
- Route::get('/', 'PostControlador@index');
- Route::post('/', 'PostControlador@store');
- Route::delete('/{id}', 'PostControlador@destroy');
- Route::get('/download/{id}', 'PostControlador@download');
- 
-
+//Promoções
+Route::get('/postes/index', 'Admin\PostController@index')->name('admin.postes.index');
+Route::post('/postes/index', 'Admin\PostController@store');
+Route::delete('/postes/index/{id}', 'Admin\PostController@destroy');
+Route::get('/postes/index/download/{id}', 'Admin\PostController@download');
 
 // Landing-page
- Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
- Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsController@store')->name('admin.pageprincipal.pageprincipal.salvar');
+Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
+Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsController@store')->name('admin.pageprincipal.pageprincipal.salvar');
 
 Route::middleware(['auth', 'web'])->group(function () {
     Route::name('admin.')->prefix('sistema')->group(function () {
@@ -63,7 +68,7 @@ Route::middleware(['auth', 'web'])->group(function () {
             Route::get('{id}/editar', 'Admin\ContactsController@edit')->name('edit');
             Route::put('{id}/alterar', 'Admin\ContactsController@update')->name('update');
             Route::get('{id}/excluir', 'Admin\ContactsController@destroy')->name('destroy');
-            
+
             // Tattoo
             Route::name('tattoo.')->prefix('tattoo')->group(function () {
                 Route::post('salvar', 'Admin\ContactsController@storeTattoo')->name('storeTattoo');
@@ -79,7 +84,6 @@ Route::middleware(['auth', 'web'])->group(function () {
                 Route::get('index', 'Admin\AutoCompleteController@index')->name('index');
                 Route::get('search', 'Admin\AutoCompleteController@search')->name('search');
             });
-           
 
         });
     });
