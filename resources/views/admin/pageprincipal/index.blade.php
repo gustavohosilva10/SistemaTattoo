@@ -15,7 +15,7 @@
                         <div class="card-header text-light text-uppercase bg-dark font-weight-bold">
                             <i class="fas fa-file"></i> Inicio
                             <span class="float-right">
-                                <a href="/contracts/contract/novo" class="btn py-0 px-0" data-toggle="tooltip"
+                                <a href="/welcome/index" class="btn py-0 px-0" data-toggle="tooltip"
                                     data-placement="bottom" title="Adicionar Contrato">
                                     <i class="fas fa-pen-square text-warning"></i>
                                 </a>

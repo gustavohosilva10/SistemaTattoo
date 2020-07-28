@@ -37,20 +37,25 @@ Route::get('/contracts/contract/{id}/editar', 'Admin\ContractsController@edit')-
 Route::post('/contracts/contract/salvar', 'Admin\ContractsController@store')->name('admin.contracts.contract.salvar');
 Route::patch('/contracts/contract/{id}/atualizar', 'Admin\ContractsController@update')->name('admin.contracts.contract.atualizar');
 Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@destroy')->name('admin.contracts.contract.deletar');
+
+// Landing-page
+Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
+Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsController@store')->name('admin.pageprincipal.pageprincipal.salvar');
+
+//Inicio
+Route::get('/welcome/index', 'Admin\WelcomeController@index')->name('admin.welcome.index');
+Route::post('/welcome/index', 'Admin\WelcomeController@store');
+Route::delete('/welcome/index/{id}', 'Admin\WelcomeController@destroy');
+
 //Bibliografia
 Route::get('/bibliography/index', 'Admin\BibliographyController@index')->name('admin.bibliography.index');
 Route::post('/bibliography/index', 'Admin\BibliographyController@store');
 Route::delete('/bibliography/index/{id}', 'Admin\BibliographyController@destroy');
-Route::get('/bibliography/index/download/{id}', 'Admin\BibliographyController@download');
 
 //Promoções
 Route::get('/postes/index', 'Admin\PostController@index')->name('admin.postes.index');
 Route::post('/postes/index', 'Admin\PostController@store');
 Route::delete('/postes/index/{id}', 'Admin\PostController@destroy');
-
-// Landing-page
-Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
-Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsController@store')->name('admin.pageprincipal.pageprincipal.salvar');
 
 Route::middleware(['auth', 'web'])->group(function () {
     Route::name('admin.')->prefix('sistema')->group(function () {
