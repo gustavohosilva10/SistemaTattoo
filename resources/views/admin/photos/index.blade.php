@@ -58,7 +58,7 @@
                         <div class="btn-group">
                           <!--button type="button" class="btn btn-sm btn-outline-secondary">Download</button-->
                           <a type="button" class="btn btn-primary" href="/download/{{$photos->id}}">Download</a>
-                          <form action="/photos/index/{{ $photos->id }}" method="POST">
+                          <form action="/postes/index/{{ $photos->id }}" method="POST">
                             @csrf
                             <input type="hidden" name="_method" value="delete">
                             <button type="submit" class="btn btn-danger">Apagar</button>
@@ -78,5 +78,4 @@
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
 </body>
 </html>
-
 @stop
