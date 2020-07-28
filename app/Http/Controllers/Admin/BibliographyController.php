@@ -39,12 +39,12 @@ class BibliographyController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('img_perfil')->store('bibliografia', 'public');
+        $path = $request->file('img_profile')->store('bibliografia', 'public');
 
         $bibliography = new Bibliography();
         $bibliography->name_perfil = $request->input('name_perfil');
         $bibliography->text_perfil = $request->input('text_perfil');
-        $bibliography->img_perfil = $path;
+        $bibliography->img_profile = $path;
         $bibliography->save();
 
         return Redirect::to('/bibliography/index');

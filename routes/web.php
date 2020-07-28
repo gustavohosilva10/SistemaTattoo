@@ -47,7 +47,6 @@ Route::get('/bibliography/index/download/{id}', 'Admin\BibliographyController@do
 Route::get('/postes/index', 'Admin\PostController@index')->name('admin.postes.index');
 Route::post('/postes/index', 'Admin\PostController@store');
 Route::delete('/postes/index/{id}', 'Admin\PostController@destroy');
-Route::get('/postes/index/download/{id}', 'Admin\PostController@download');
 
 // Landing-page
 Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
