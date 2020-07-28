@@ -46,7 +46,10 @@ Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsControll
 Route::get('/welcome/index', 'Admin\WelcomeController@index')->name('admin.welcome.index');
 Route::post('/welcome/index', 'Admin\WelcomeController@store');
 Route::delete('/welcome/index/{id}', 'Admin\WelcomeController@destroy');
-
+//Photos
+Route::get('/photos/index', 'Admin\PhotosController@index')->name('admin.photos.index');
+Route::post('/photos/index', 'Admin\PhotosController@store');
+Route::delete('/photos/{id}', 'Admin\PhotosController@destroy');
 //Bibliografia
 Route::get('/bibliography/index', 'Admin\BibliographyController@index')->name('admin.bibliography.index');
 Route::post('/bibliography/index', 'Admin\BibliographyController@store');

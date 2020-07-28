@@ -4,13 +4,13 @@ namespace TattooOpen;
 
 use Illuminate\Database\Eloquent\Model;
 
-class photo extends Model
+class Photos extends Model
 {
-    protected $table = "photo";
+    protected $table = "photos";
     public $timestamps = false;
     public $fillable = [
 
-        'base64_image',
+        'photos_page',
 
     ];
 }

@@ -22,16 +22,12 @@
                     </div>
                     <div class="card-body py-5">
     
-          <h1 class="jumbotron-heading">Promoções</h1>
-          <form method="POST" action="/postes/index" enctype="multipart/form-data">
+          <h1 class="jumbotron-heading">Fotos</h1>
+          <form method="POST" action="/photos/index" enctype="multipart/form-data">
             @csrf
-            <div class="form-group text-left">
-              <label for="desciption_promotion">Descrição</label>
-              <textarea class="form-control" id="desciption_promotion" name="desciption_promotion" rows="3"></textarea>
-            </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="arquivo" name="arquivo">
-              <label class="custom-file-label" for="arquivo">Escolha uma imagem (Tamanho recomendado 500X400)</label>
+              <input type="file" class="custom-file-input" id="photos_page" name="photos_page">
+              <label class="custom-file-label" for="photos_page">Escolha uma imagem (Tamanho recomendado 800X533)</label>
             </div>
             <p>
               <button type="submit" class="btn btn-primary my-2">Enviar</button>
@@ -53,17 +49,16 @@
               </div>
               <div class="card-body py-5">
       
-            @foreach($posts as $post)
+            @foreach($photos as $photos)
                 <div class="col-md-4">
                   <div class="card mb-4 shadow-sm">
-                    <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{ $post->arquivo }}">
+                    <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{ $photos->photos_page }}">
                     <div class="card-body">
-                      <p class="card-text">{{ $post->desciption_promotion }}</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <!--button type="button" class="btn btn-sm btn-outline-secondary">Download</button-->
-                          <a type="button" class="btn btn-primary" href="/download/{{$post->id}}">Download</a>
-                          <form action="/postes/index/{{ $post->id }}" method="POST">
+                          <a type="button" class="btn btn-primary" href="/download/{{$photos->id}}">Download</a>
+                          <form action="/photos/index/{{ $photos->id }}" method="POST">
                             @csrf
                             <input type="hidden" name="_method" value="delete">
                             <button type="submit" class="btn btn-danger">Apagar</button>
