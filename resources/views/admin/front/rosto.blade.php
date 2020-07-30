@@ -58,6 +58,89 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
+  <style>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+  </style>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
   
 
@@ -301,26 +384,7 @@
               <figure class="mb-5" data-aos="fade-up"><img src="/storage/{{ $bibliography->img_profile }}" alt="Image" class="img-fluid w-50 rounded"></figure>
               <div data-aos="fade-up"  data-aos-delay="100">
               <h2 class="text-white">{{ $bibliography->name_perfil}}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam a velit. Harum eligendi quod reiciendis quos ullam libero est dolor, <a href="#">corporis dolores assumenda</a>, delectus, quidem voluptatibus dolorum temporibus enim!</p>
-              <p>Neque facilis soluta, accusantium quaerat, adipisci porro animi, hic fugiat id vero placeat dolorem accusamus sapiente odio consequatur debitis beatae eius quos alias. In recusandae magnam quis ipsum, asperiores mollitia!</p>
-              <h3 class="text-white mt-5">Photographer for 10 years</h3>
-              <p>Tempore repudiandae <a href="#">rerum numquam iste</a>, quibusdam omnis voluptates quaerat veniam neque odit sit vel dolores. Optio eveniet ex laborum similique inventore sapiente tenetur. Ipsam aliquam esse voluptate qui reiciendis. Harum.</p>
-              <div class="d-block d-md-flex mt-5">
-                <div class="mr-md-auto mr-2">
-                  <ul class="ul-check list-unstyled success">
-                    <li>Optio eveniet ex laborum</li>
-                    <li>Inventore sapiente tenetur</li>
-                    <li>Ipsam aliquam esse</li>
-                  </ul>
-                </div>
-                <div class="mr-md-auto">
-                  <ul class="ul-check list-unstyled success">
-                    <li>Optio eveniet ex laborum</li>
-                    <li>Inventore sapiente tenetur</li>
-                    <li>Ipsam aliquam esse</li>
-                  </ul>
-                </div>
-
+              <p style="word-wrap: break-word;">{{ $bibliography->text_perfil}} </p>
               </div>
               </div>
             </div>
@@ -333,7 +397,7 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="row">
-                <h2 class="heading text-uppercase text-white"  data-aos="fade-up">Blog</h2>
+                <h2 class="heading text-uppercase text-white"  data-aos="fade-up">Promoções</h2>
                 <div class="col-md-12 mb-4" data-aos="fade-up">
                   <div class="d-md-flex d-block blog-entry align-items-start">
                     <div class="mr-0 mr-md-5 mb-3 img-wrap"><a href="single.html"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a></div>
