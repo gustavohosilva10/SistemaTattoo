@@ -56,8 +56,10 @@
               <div class="card-header text-light text-uppercase bg-dark font-weight-bold">
                   <i class="fas fa-file"></i> Exibição
               </div>
-              <div class="card-body py-5">
-      
+              
+              <div class="album py-5 bg-light">
+                <div class="container">
+                  <div class="row">
             @foreach($bibliography as $bibliography)
                 <div class="col-md-4">
                   <div class="card mb-4 shadow-sm">

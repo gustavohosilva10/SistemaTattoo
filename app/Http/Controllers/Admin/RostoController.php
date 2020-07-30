@@ -2,18 +2,18 @@
 
 namespace TattooOpen\Http\Controllers\Admin;
 
+use TattooOpen\Bibliography;
 use TattooOpen\Http\Controllers\Controller;
-use TattooOpen\Pageprincipals;
-use TattooOpen\Session;
+use TattooOpen\Welcome;
 
-use Illuminate\Http\Request;
+class RostoController extends Controller
+{
 
-class RostoController extends Controller{
+    public function index()
+    {
 
-    public function index(){
-
-        $pageprincipal  = Pageprincipals::all();
-        return view('admin.front.rosto')->with('pageprincipal', $pageprincipal);
+        $welcome = Welcome::first();
+        $bibliography = Bibliography::first();
+        return view('admin.front.rosto', compact(['welcome', $welcome, 'bibliography', $bibliography]));
     }
 }
-     

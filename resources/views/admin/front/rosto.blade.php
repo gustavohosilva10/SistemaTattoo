@@ -98,9 +98,9 @@
     <section class="site-section-hero bg-image"  data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-7 text-center">
-            <h1 class="text-white heading text-uppercase" data-aos="fade-up">Welcome</h1>
-            <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi accusantium voluptatum saepe. Natus nihil, facere corporis numquam, architecto dolorum.</p>
-            <p data-aos="fade-up" data-aos-delay="100"><a href="#section-contact" class="btn btn-primary btn-md smoothscroll">Contact Me</a></p>
+          <h1 class="text-white heading text-uppercase" data-aos="fade-up">{{!!$welcome->text_welcome_title!!}}</h1>
+          <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">{{$welcome->text_welcome}}</p>
+            <p data-aos="fade-up" data-aos-delay="100"><a href="#section-contact" class="btn btn-primary btn-md smoothscroll">Contato</a></p>
           </div>
         </div>
       </section>
@@ -112,8 +112,8 @@
         <div class="row align-items-stretch">
         
         <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href=" {{$pageprincipal}}" class="d-block photo-item" data-fancybox="gallery">
-            <img src="{{$pageprincipal}}" alt="Image" class="img-fluid">
+          <a href="" class="d-block photo-item" data-fancybox="gallery">
+            <img src="" alt="Image" class="img-fluid">
             <div class="photo-text-more">
               <span class="icon icon-search"></span>
             </div>
@@ -297,10 +297,10 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">
-              <h2 class="heading text-uppercase text-white">Biography</h2>
-              <figure class="mb-5" data-aos="fade-up"><img src="images/person_3.jpg" alt="Image" class="img-fluid w-50 rounded"></figure>
+              <h2 class="heading text-uppercase text-white">Bibliografia</h2>
+              <figure class="mb-5" data-aos="fade-up"><img src="/storage/{{ $bibliography->img_profile }}" alt="Image" class="img-fluid w-50 rounded"></figure>
               <div data-aos="fade-up"  data-aos-delay="100">
-              <h2 class="text-white">Hi I'm Jed</h2>
+              <h2 class="text-white">{{ $bibliography->name_perfil}}</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam a velit. Harum eligendi quod reiciendis quos ullam libero est dolor, <a href="#">corporis dolores assumenda</a>, delectus, quidem voluptatibus dolorum temporibus enim!</p>
               <p>Neque facilis soluta, accusantium quaerat, adipisci porro animi, hic fugiat id vero placeat dolorem accusamus sapiente odio consequatur debitis beatae eius quos alias. In recusandae magnam quis ipsum, asperiores mollitia!</p>
               <h3 class="text-white mt-5">Photographer for 10 years</h3>
