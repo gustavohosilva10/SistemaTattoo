@@ -93,7 +93,7 @@ class PhotosController extends Controller
     {
         $photos = Photos::find($id);
         if (isset($photos)) {
-            Photos::disk('public')->delete($photos->photos_page);
+            Storage::disk('public')->delete($photos->photos_page);
             $photos->delete();
         }
         return Redirect::to('/photos/index');

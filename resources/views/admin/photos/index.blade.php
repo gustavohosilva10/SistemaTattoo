@@ -12,6 +12,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-center">
@@ -48,31 +49,32 @@
               <div class="card-header text-light text-uppercase bg-dark font-weight-bold">
                   <i class="fas fa-file"></i> Exibição
               </div>
-              <div class="card-body py-5">
-      
-            @foreach($photos as $photos)
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow-sm">
-                    <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{ $photos->photos_page }}">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <!--button type="button" class="btn btn-sm btn-outline-secondary">Download</button-->
-                          <a type="button" class="btn btn-primary" href="/download/{{$photos->id}}">Download</a>
-                          <form action="/postes/index/{{ $photos->id }}" method="POST">
-                            @csrf
-                            <input type="hidden" name="_method" value="delete">
-                            <button type="submit" class="btn btn-danger">Apagar</button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      @foreach($photos as $photo)
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{ $photo->photos_page }}">
+              <div class="card-body">
+               
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <!--button type="button" class="btn btn-sm btn-outline-secondary">Download</button-->
+                    <form action="/photos/index/{{ $photo->id }}" method="POST">
+                      @csrf
+                      <input type="hidden" name="_method" value="delete">
+                      <button type="submit" class="btn btn-danger">Apagar</button>
+                    </form>
                   </div>
                 </div>
-            @endforeach
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+      @endforeach
+    </div>
+  </div>
+</div>
 
     </main>
 
