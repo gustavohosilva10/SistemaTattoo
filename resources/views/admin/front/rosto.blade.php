@@ -110,185 +110,16 @@
       <section class="row align-items-stretch photos" id="section-photos">
         <div class="col-12">
         <div class="row align-items-stretch">
-        
+          @foreach($photos as $photo)
         <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="" class="d-block photo-item" data-fancybox="gallery">
-            <img src="" alt="Image" class="img-fluid">
+          <a href="/storage/{{ $photo->photos_page }}" class="d-block photo-item" data-fancybox="gallery">
+            <img src="/storage/{{ $photo->photos_page }}" alt="Image" class="img-fluid">
             <div class="photo-text-more">
               <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_5.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_5.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="images/img_1.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="images/img_2.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_3.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="images/img_6.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_6.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="images/img_7.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_7.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_8.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_8.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="images/img_9.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_9.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-
-
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="images/img_10.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_10.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_1.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="images/img_2.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="images/img_3.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_4.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_4.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="images/img_5.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_5.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a href="images/img_6.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_6.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_7.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_7.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="images/img_8.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_8.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_9.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_9.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="images/img_4.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_4.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="images/img_5.jpg" class="d-block photo-item" data-fancybox="gallery">
-            <img src="images/img_5.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-
-        
-
+        @endforeach
       </div>
         
     </div>
@@ -300,11 +131,10 @@
               <h2 class="heading text-uppercase text-white">Bibliografia</h2>
               <figure class="mb-5" data-aos="fade-up"><img src="/storage/{{ $bibliography->img_profile }}" alt="Image" class="img-fluid w-50 rounded"></figure>
               <div data-aos="fade-up"  data-aos-delay="100">
-              <h2 class="text-white">{{ $bibliography->name_perfil}}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam a velit. Harum eligendi quod reiciendis quos ullam libero est dolor, <a href="#">corporis dolores assumenda</a>, delectus, quidem voluptatibus dolorum temporibus enim!</p>
-              <p>Neque facilis soluta, accusantium quaerat, adipisci porro animi, hic fugiat id vero placeat dolorem accusamus sapiente odio consequatur debitis beatae eius quos alias. In recusandae magnam quis ipsum, asperiores mollitia!</p>
-              <h3 class="text-white mt-5">Photographer for 10 years</h3>
-              <p>Tempore repudiandae <a href="#">rerum numquam iste</a>, quibusdam omnis voluptates quaerat veniam neque odit sit vel dolores. Optio eveniet ex laborum similique inventore sapiente tenetur. Ipsam aliquam esse voluptate qui reiciendis. Harum.</p>
+              <h2 class="text-white">{{$bibliography->name_perfil}}</h2>
+              <p style="word-wrap: break-word;">{{$bibliography->text_perfil}} </p>
+              <h3 class="text-white mt-5"></h3>
+              <p><a href="#"></a>, quibusdam omnis voluptates quaerat veniam neque odit sit vel dolores. Optio eveniet ex laborum similique inventore sapiente tenetur. Ipsam aliquam esse voluptate qui reiciendis.</p>
               <div class="d-block d-md-flex mt-5">
                 <div class="mr-md-auto mr-2">
                   <ul class="ul-check list-unstyled success">

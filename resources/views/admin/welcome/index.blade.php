@@ -31,7 +31,7 @@
             </div>
          
             <div class="form-group text-left">
-              <label for="text_welcome">Teexto de boas vindas</label>
+              <label for="text_welcome">Texto de boas vindas</label>
               <input class="form-control" id="text_welcome" name="text_welcome" rows="3"></input>
             </div>
             <p>
