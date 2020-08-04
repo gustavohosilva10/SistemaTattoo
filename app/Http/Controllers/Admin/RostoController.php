@@ -5,6 +5,7 @@ namespace TattooOpen\Http\Controllers\Admin;
 use TattooOpen\Bibliography;
 use TattooOpen\Http\Controllers\Controller;
 use TattooOpen\Photos;
+use TattooOpen\Posts;
 use TattooOpen\Welcome;
 
 class RostoController extends Controller
@@ -16,6 +17,7 @@ class RostoController extends Controller
         $welcome = Welcome::first();
         $bibliography = Bibliography::first();
         $photos = Photos::all();
-        return view('admin.front.rosto', compact(['welcome', $welcome, 'bibliography', $bibliography, 'photos', $photos]));
+        $posts = Posts::all();
+        return view('admin.front.rosto', compact(['welcome', $welcome, 'bibliography', $bibliography, 'photos', $photos, 'posts', $posts]));
     }
 }

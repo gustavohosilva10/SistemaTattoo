@@ -9,38 +9,25 @@
 
     
     
-    <link href="{{ asset('css/aos.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-datepicker.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fancybox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/magnific-popup.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/mediaelementplayer.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mediaelementplayer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-reboot.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-grid.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-datepicker.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-reboot.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-grid.css') }}" rel="stylesheet">
 
-    <script src="{{ asset('js/aos.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.easing.1.3.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
-    <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
-    <script src="{{ asset('js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('js/aos.js') }}"></script>
     <script src="{{ asset('js/mediaelement-and-player.min.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
-    <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('js/app.min.js') }}"></script>
     <script src="{{ asset('js/typed.js') }}"></script>
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -49,8 +36,6 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/fancybox.min.css">
@@ -124,7 +109,7 @@
         
     </div>
       
-      <section class="site-section darken-bg" id="section-bio">
+      <section class="site-section" style="10" id="section-bio">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">
@@ -133,24 +118,6 @@
               <div data-aos="fade-up"  data-aos-delay="100">
               <h2 class="text-white">{{$bibliography->name_perfil}}</h2>
               <p style="word-wrap: break-word;">{{$bibliography->text_perfil}} </p>
-              <h3 class="text-white mt-5"></h3>
-              <p><a href="#"></a>, quibusdam omnis voluptates quaerat veniam neque odit sit vel dolores. Optio eveniet ex laborum similique inventore sapiente tenetur. Ipsam aliquam esse voluptate qui reiciendis.</p>
-              <div class="d-block d-md-flex mt-5">
-                <div class="mr-md-auto mr-2">
-                  <ul class="ul-check list-unstyled success">
-                    <li>Optio eveniet ex laborum</li>
-                    <li>Inventore sapiente tenetur</li>
-                    <li>Ipsam aliquam esse</li>
-                  </ul>
-                </div>
-                <div class="mr-md-auto">
-                  <ul class="ul-check list-unstyled success">
-                    <li>Optio eveniet ex laborum</li>
-                    <li>Inventore sapiente tenetur</li>
-                    <li>Ipsam aliquam esse</li>
-                  </ul>
-                </div>
-
               </div>
               </div>
             </div>
@@ -163,50 +130,17 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="row">
-                <h2 class="heading text-uppercase text-white"  data-aos="fade-up">Blog</h2>
+                <h2 class="heading text-uppercase text-white"  data-aos="fade-up">Promoções</h2>
+                @foreach($posts as $post)
                 <div class="col-md-12 mb-4" data-aos="fade-up">
                   <div class="d-md-flex d-block blog-entry align-items-start">
-                    <div class="mr-0 mr-md-5 mb-3 img-wrap"><a href="single.html"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a></div>
+                    <div class="mr-0 mr-md-5 mb-3 img-wrap"><a href="single.html"><img src="/storage/{{ $post->arquivo }}" alt="Image" class="img-fluid"></a></div>
                     <div>
-                      <h2 class="mt-0 mb-2"><a href="single.html">My New Photography Has Been Featured in Forbes</a></h2>
-                      <div class="meta mb-3">Posted by Ben Jones on <a href="#">Jan 18, 2019</a></div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aliquid doloremque qui, saepe alias eum?</p>
+                      <h2 class="mt-0 mb-2"><a href="single.html">{{ $post->desciption_promotion }}</a></h2>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-md-12 mb-4" data-aos="fade-up">
-                  <div class="d-md-flex d-block blog-entry align-items-start">
-                    <div class="mr-0 mr-md-5 mb-3 img-wrap"><a href="single.html"><img src="images/blog_2.jpg" alt="Image" class="img-fluid"></a></div>
-                    <div>
-                      <h2 class="mt-0 mb-2"><a href="single.html">My New Photography Has Been Featured in Forbes</a></h2>
-                      <div class="meta mb-3">Posted by Ben Jones on <a href="#">Jan 18, 2019</a></div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aliquid doloremque qui, saepe alias eum?</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 mb-4" data-aos="fade-up">
-                  <div class="d-md-flex d-block blog-entry align-items-start">
-                    <div class="mr-0 mr-md-5 mb-3 img-wrap"><a href="single.html"><img src="images/blog_3.jpg" alt="Image" class="img-fluid"></a></div>
-                    <div>
-                      <h2 class="mt-0 mb-2"><a href="single.html">My New Photography Has Been Featured in Forbes</a></h2>
-                      <div class="meta mb-3">Posted by Ben Jones on <a href="#">Jan 18, 2019</a></div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aliquid doloremque qui, saepe alias eum?</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 mb-4" data-aos="fade-up">
-                  <div class="d-md-flex d-block blog-entry align-items-start">
-                    <div class="mr-0 mr-md-5 mb-3 img-wrap"><a href="single.html"><img src="images/blog_4.jpg" alt="Image" class="img-fluid"></a></div>
-                    <div>
-                      <h2 class="mt-0 mb-2"><a href="single.html">My New Photography Has Been Featured in Forbes</a></h2>
-                      <div class="meta mb-3">Posted by Ben Jones on <a href="#">Jan 18, 2019</a></div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aliquid doloremque qui, saepe alias eum?</p>
-                    </div>
-                  </div>
-                </div>  
+                @endforeach
           </div>
         </div>
       </section>
@@ -227,19 +161,13 @@
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   <script src="js/jquery.countdown.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/aos.js"></script>
-  
-
-  <script src="js/jquery.fancybox.min.js"></script>
 
   <script src="js/main.js"></script>
     
