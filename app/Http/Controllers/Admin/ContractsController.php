@@ -23,7 +23,7 @@ class ContractsController extends Controller
 
     public function index()
     {
-        $contract = Contract::all();
+        $contract = Contract::first();
 
         return view('admin.contracts.index')->with('contract', $contract);
 

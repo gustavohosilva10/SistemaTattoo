@@ -30,13 +30,13 @@
                     @endif
 
                     <table class="table table-bordered" id="tableDefault" style="width:100%">
-
                         <thead>
                             <tr>
                                 <td>Contrato
-                                    @if($contract != null){
+                                    @if(empty(isset($contract->text_contract)))
+                                    <p>Não possui um contrato</p>
+                                    @else
                                     <p> {!!$contract->text_contract!!} </p>
-                                    }
                                     @endif
                                 </td>
                                 
