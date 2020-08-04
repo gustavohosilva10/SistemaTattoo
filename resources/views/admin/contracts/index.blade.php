@@ -34,7 +34,10 @@
                         <thead>
                             <tr>
                                 <td>Contrato
+                                    @if($contract != null){
                                     <p> {!!$contract->text_contract!!} </p>
+                                    }
+                                    @endif
                                 </td>
                                 
                                 <td class="align-middle">
