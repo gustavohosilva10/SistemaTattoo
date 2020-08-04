@@ -1,0 +1,40 @@
+<?php
+
+namespace TattooOpen\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class PostsRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return false;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+
+            'desciption_promotion' => 'required',
+            'arquivo' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+
+            'desciption_promotion' => 'Envie uma descrição válida!',
+        ];
+    }
+}

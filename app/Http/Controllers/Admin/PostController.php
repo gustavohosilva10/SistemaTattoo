@@ -23,6 +23,7 @@ class PostController extends Controller
         $post = new Posts();
         $post->desciption_promotion = $request->input('desciption_promotion');
         $post->arquivo = $path;
+
         $post->save();
 
         return Redirect::to('/postes/index');

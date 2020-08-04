@@ -26,13 +26,13 @@
           <form method="POST" action="/welcome/index" >
             @csrf
             <div class="form-group text-left">
-              <label for="text_welcome_title">Titulo</label>
-              <input class="form-control" id="text_welcome_title" name="text_welcome_title" rows="3"></input>
+              <label for="text_welcome_title" required>Titulo</label>
+              <input class="form-control" id="text_welcome_title" name="text_welcome_title" rows="3" required></input>
             </div>
          
             <div class="form-group text-left">
-              <label for="text_welcome">Texto de boas vindas</label>
-              <input class="form-control" id="text_welcome" name="text_welcome" rows="3"></input>
+              <label for="text_welcome"required>Texto de boas vindas</label>
+              <input class="form-control" id="text_welcome" name="text_welcome" rows="3" required></input>
             </div>
             <p>
               <button type="submit" class="btn btn-primary my-2">Enviar</button>

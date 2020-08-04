@@ -26,12 +26,12 @@
           <form method="POST" action="/postes/index" enctype="multipart/form-data">
             @csrf
             <div class="form-group text-left">
-              <label for="desciption_promotion">Descrição</label>
-              <textarea class="form-control" id="desciption_promotion" name="desciption_promotion" rows="3"></textarea>
+              <label for="desciption_promotion" required>Descrição</label>
+              <textarea class="form-control" id="desciption_promotion" name="desciption_promotion" rows="3" required></textarea>
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="arquivo" name="arquivo">
-              <label class="custom-file-label" for="arquivo">Escolha uma imagem (Tamanho recomendado 500X400)</label>
+              <input type="file" class="custom-file-input" id="arquivo" name="arquivo" required>
+              <label class="custom-file-label" id="arquivo" for="arquivo" >Escolha uma imagem (Tamanho recomendado 500X400)</label>
             </div>
             <p>
               <button type="submit" class="btn btn-primary my-2">Enviar</button>

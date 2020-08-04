@@ -27,8 +27,8 @@
           <form method="POST" action="/photos/index" enctype="multipart/form-data">
             @csrf
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="photos_page" name="photos_page">
-              <label class="custom-file-label" for="photos_page">Escolha uma imagem (Tamanho recomendado 800X533)</label>
+              <input type="file" class="custom-file-input" id="photos_page" name="photos_page" required>
+              <label class="custom-file-label" for="photos_page" required>Escolha uma imagem (Tamanho recomendado 800X533)</label>
             </div>
             <p>
               <button type="submit" class="btn btn-primary my-2">Enviar</button>
