@@ -5,9 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-   
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900|Oswald:400,700" rel="stylesheet">
+
     
+    
+    <link href="{{ asset('css/aos.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fancybox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/magnific-popup.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mediaelementplayer.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-reboot.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-grid.min.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/aos.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.easing.1.3.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('js/mediaelement-and-player.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script src="{{ asset('js/app.min.js') }}"></script>
+    <script src="{{ asset('js/typed.js') }}"></script>
+
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,7 +56,91 @@
     <link rel="stylesheet" href="css/fancybox.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+
   </head>
+  <style>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+  </style>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
   
 
@@ -268,25 +384,7 @@
               <figure class="mb-5" data-aos="fade-up"><img src="/storage/{{ $bibliography->img_profile }}" alt="Image" class="img-fluid w-50 rounded"></figure>
               <div data-aos="fade-up"  data-aos-delay="100">
               <h2 class="text-white">{{ $bibliography->name_perfil}}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam a velit. Harum eligendi quod reiciendis quos ullam libero est dolor, <a href="#">corporis dolores assumenda</a>, delectus, quidem voluptatibus dolorum temporibus enim!</p>
-              <h3 class="text-white mt-5"></h3>
-              <p><a href="#"></a></p>
-              <div class="d-block d-md-flex mt-5">
-                <div class="mr-md-auto mr-2">
-                  <ul class="ul-check list-unstyled success">
-                    <li>Optio eveniet ex laborum</li>
-                    <li>Inventore sapiente tenetur</li>
-                    <li>Ipsam aliquam esse</li>
-                  </ul>
-                </div>
-                <div class="mr-md-auto">
-                  <ul class="ul-check list-unstyled success">
-                    <li>Optio eveniet ex laborum</li>
-                    <li>Inventore sapiente tenetur</li>
-                    <li>Ipsam aliquam esse</li>
-                  </ul>
-                </div>
-
+              <p style="word-wrap: break-word;">{{ $bibliography->text_perfil}} </p>
               </div>
               </div>
             </div>
@@ -299,7 +397,7 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="row">
-                <h2 class="heading text-uppercase text-white"  data-aos="fade-up">Blog</h2>
+                <h2 class="heading text-uppercase text-white"  data-aos="fade-up">Promoções</h2>
                 <div class="col-md-12 mb-4" data-aos="fade-up">
                   <div class="d-md-flex d-block blog-entry align-items-start">
                     <div class="mr-0 mr-md-5 mb-3 img-wrap"><a href="single.html"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a></div>
@@ -361,23 +459,23 @@
 
 </div> <!-- .site-wrap -->
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/bootstrap-datepicker.min.js"></script>
-<script src="js/aos.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  
 
+  <script src="js/jquery.fancybox.min.js"></script>
 
-<script src="js/jquery.fancybox.min.js"></script>
-
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
     
   </body>
 </html>
