@@ -47,4 +47,6 @@
         ]
     });
     </script>
+    <a href="https://wa.me/55{{ preg_replace('/[^0-9]/', '', trim($company->cellphone)) }}"
+        class="whatsapp hvr-pulse" target="_blank"><i class="bx bxl-whatsapp"></i></a>
     @endsection

@@ -12,6 +12,7 @@ class bibliography extends Model
 
         'img_profile',
         'name_perfil',
+        'telephone_bibliography',
         'text_perfil',
     ];
 }

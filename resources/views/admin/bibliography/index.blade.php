@@ -30,6 +30,12 @@
               <label for="name_perfil">Nome</label>
               <input class="form-control" id="name_perfil" name="name_perfil" rows="3"></input>
             </div>
+            <div class="row">
+            <div class="form-group  col-md-3 ">
+              <label for="telephone_bibliography">Telefone</label>
+              <input class="form-control" id="telephone_bibliography" name="telephone_bibliography" rows="3" required></input>
+            </div>
+            </div>
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="img_profile" name="img_profile">
               <label class="custom-file-label" for="img_profile">Escolha uma imagem (Tamanho recomendado 500X400)</label>
@@ -66,6 +72,7 @@
                     <p class="card-text">Nome : {{ $bibliography->name_perfil }}</p>
                     <img class="card-img-top figure-img img-fluid rounded" src="/storage/{{ $bibliography->img_profile }}">
                     <div class="card-body">
+                    <p class="card-text">Telefone:{{ $bibliography->telephone_bibliography}}</p>
                       <p class="card-text">Sobre : {{ $bibliography->text_perfil }}</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">

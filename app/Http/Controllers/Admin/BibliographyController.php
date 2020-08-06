@@ -43,6 +43,7 @@ class BibliographyController extends Controller
 
         $bibliography = new Bibliography();
         $bibliography->name_perfil = $request->input('name_perfil');
+        $bibliography->telephone_bibliography = $request->input('telephone_bibliography');
         $bibliography->text_perfil = $request->input('text_perfil');
         $bibliography->img_profile = $path;
         $bibliography->save();

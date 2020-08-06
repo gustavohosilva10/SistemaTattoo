@@ -17,6 +17,7 @@ class CreateBibliographyTable extends Migration
             $table->increments('id');
             $table->string('img_profile')->nullable();
             $table->string('name_perfil')->nullable();
+            $table->string('telephone_bibliography')->nullable();
             $table->string('text_perfil')->nullable();
 
             $table->timestamps();

@@ -72,29 +72,18 @@
         <li><a href="#section-blog" class="nav-link">Promoções</a></li>
       </ul>
       <ul class="social js-clone-nav">
-        <li><a href="#"><span class="icon-facebook"></span></a></li>
-        <li><a href="#"><span class="icon-twitter"></span></a></li>
-        <li><a href="#"><span class="icon-instagram"></span></a></li>
+        
       </ul>
     </div>
   </header> 
-  @if(empty(isset($contract->text_contract)))
-                   
-  <span class="float-right">
-      <a href="/contracts/contract/novo" class="btn py-0 px-0" data-toggle="tooltip"
-          data-placement="bottom" title="Adicionar Contrato">
-          <i class="fas fa-plus-square" style="color:#fff;"></i>
-      </a>
-  </span>
-  @else
-  @endif
+ 
   <main class="main-content">
     <section class="site-section-hero bg-image"  data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-7 text-center">
           <h1 class="text-white heading text-uppercase" data-aos="fade-up">{{!!$welcome->text_welcome_title!!}}</h1>
           <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">{{$welcome->text_welcome}}</p>
-            <p data-aos="fade-up" data-aos-delay="100"><a href="#section-contact" class="btn btn-primary btn-md smoothscroll">Contato</a></p>
+            <p data-aos="fade-up" data-aos-delay="100"><a  href="https://wa.me/55{{$bibliography->telephone_bibliography}}" class="btn btn-primary btn-md smoothscroll">Contato</a></p>
           </div>
         </div>
       </section>
@@ -127,13 +116,14 @@
               <div data-aos="fade-up"  data-aos-delay="100">
               <h2 class="text-white">{{$bibliography->name_perfil}}</h2>
               <p style="word-wrap: break-word;">{{$bibliography->text_perfil}} </p>
+              <p class="text-white"> Whatsapp :{{$bibliography->telephone_bibliography}}</p>
               </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+  
       <section class="site-section" id="section-blog">
         <div class="container">
           <div class="row justify-content-center">
@@ -165,7 +155,13 @@
       </div>
     </div>
   </main>
-
+<footer>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a  href="https://wa.me/55{{$bibliography->telephone_bibliography}}" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+    z-index:1000;" target="_blank">
+  <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+  </a>
+</footer>
 </div> <!-- .site-wrap -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
