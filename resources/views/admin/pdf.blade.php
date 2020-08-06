@@ -78,7 +78,7 @@
                         <table cellspacing="0" cellpadding="0" >
                             <tr>
                                 <td class="w_40"> Nome : </td>
-                                <td> {{!! $contact->first_name !!}} </td>
+                                <td> {{ $contact->first_name }} </td>
                             </tr>
                             <tr>
                                 <td class="w_40"> Sobrenome: </td>

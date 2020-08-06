@@ -27,7 +27,7 @@
             @csrf
             <div class="form-group text-left">
               <label for="desciption_promotion" required>Descrição</label>
-              <textarea class="form-control" id="desciption_promotion" name="desciption_promotion" rows="3" required></textarea>
+              <input type="text" class="form-control" id="desciption_promotion" name="desciption_promotion"  required></textarea>
             </div>
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="arquivo" name="arquivo" required>

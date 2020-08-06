@@ -78,7 +78,16 @@
       </ul>
     </div>
   </header> 
-
+  @if(empty(isset($contract->text_contract)))
+                   
+  <span class="float-right">
+      <a href="/contracts/contract/novo" class="btn py-0 px-0" data-toggle="tooltip"
+          data-placement="bottom" title="Adicionar Contrato">
+          <i class="fas fa-plus-square" style="color:#fff;"></i>
+      </a>
+  </span>
+  @else
+  @endif
   <main class="main-content">
     <section class="site-section-hero bg-image"  data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">

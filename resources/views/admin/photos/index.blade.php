@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'Promoções')
+@section('title', 'Fotos')
 @section('content')
 
 <!doctype html>
