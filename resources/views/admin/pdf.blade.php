@@ -7,10 +7,10 @@
 </head>
     <style>
       
-
         * {
             margin: 5px;
             padding: 0px;
+            table-layout:fixed;
         }
 
         table {
@@ -60,6 +60,7 @@
         p{
             font-size: 14px;
             font-family: Arial, Helvetica, sans-serif;
+            word-wrap:break-word;
         }
     </style>
 
@@ -110,10 +111,10 @@
         </div>
 
 
-        <table cellspacing="0" cellpadding="0" class="table-round-corner" style="margin-top:50px; background-color: #000;">>
+        <table cellspacing="0" cellpadding="0" class="table-round-corner" style="margin-top:50px; background-color: #000;">
             <tr class="bg_cinza">
                 <th colspan=3  style="color: #fff">CONTRATO</th>
-            {{!!$contract->text_contract!!}}
+                <p style="  word-wrap: break-word;">{!!$contract->text_contract!!}</p>
             </tr>
         </table>
     
