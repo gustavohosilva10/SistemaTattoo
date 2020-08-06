@@ -66,7 +66,7 @@
                                             </td>
                                             <td class="align-middle">
                                                 
-                                                <a href="{{ route('admin.contacts.show', $contact->id) }}" data-toggle="tooltip" data-placement="bottom" title="Imprimir contrato">
+                                                <a href="/pdf" data-toggle="tooltip" data-placement="bottom" title="Imprimir contrato">
                                                     <i class="fas fa-file" style="font-size:1.5em"></i>
                                                 </a>
                                                 

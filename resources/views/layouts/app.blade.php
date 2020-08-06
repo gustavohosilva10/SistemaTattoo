@@ -29,7 +29,7 @@
         @else
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-lg py-0">
                 <a class="navbar-brand" href="{{ url('/sistema/painel') }}">
-                    <img src="{{ asset('images/logo-trusttattoo-line.png') }}" alt="Trust Tattoo" width="230" height="61.63" />
+                   <h3 style="color: azure;">Inicio</h3>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,19 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <div class="navbar-nav mr-auto w-auto ui-widget">
-                        {!! Form::open([
-                            'method' => 'get',
-                            'route' => 'admin.contacts.autocomplete.index',
-                            'id' => 'searchform',
-                            'class' => 'w-100 mb-0'
-                        ]) !!}
-                            {!! Form::text('search', false, [
-                                'class' => 'form-control form-control-dark',
-                                'id' => 'search',
-                                'placeholder' => 'Pesquisar',
-                                'aria-label' => 'Search'
-                            ]) !!}
-                        {!! Form::close() !!}
+                    
                     </div>
 
                     <!-- Right Side Of Navbar -->
