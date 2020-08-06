@@ -9,12 +9,16 @@
             <div class="card text-dark bg-secondary border-dark shadow-lg mb-5">
                 <div class="card-header text-light text-uppercase bg-dark font-weight-bold">
                     <i class="fas fa-file"></i> Contrato
+                    @if(empty(isset($contract->text_contract)))
+                   
                     <span class="float-right">
                         <a href="/contracts/contract/novo" class="btn py-0 px-0" data-toggle="tooltip"
                             data-placement="bottom" title="Adicionar Contrato">
                             <i class="fas fa-plus-square" style="color:#fff;"></i>
                         </a>
                     </span>
+                    @else
+                    @endif
                 </div>
                 <div class="card-body">
 
@@ -36,15 +40,18 @@
                                     @if(empty(isset($contract->text_contract)))
                                     <p>Não possui um contrato</p>
                                     @else
-                                    <p> {!!$contract->text_contract!!} </p>
+                                    <p > {!!$contract->text_contract!!} </p>
                                     @endif
                                 </td>
-                                
                                 <td class="align-middle">
-                                    <a href='/contracts/editcontract/{{$contract->id}}' data-toggle="tooltip"
-                                        data-placement="bottom" title="Editar contato">
-                                        <i class="fas fa-pen-square text-warning" style="font-size:1.5em"></i>
-                                    </a>
+                                    @if(empty(isset($contract->text_contract)))
+                                    @else
+                                <form action="/contracts/contract/{{$contract->id}}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="delete">
+                                    <button type="submit" class="btn btn-danger">Apagar</button>
+                                </form>
+                                    @endif
                                 </td>
                             </tr>
                         </thead>

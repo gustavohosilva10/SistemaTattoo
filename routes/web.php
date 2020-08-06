@@ -29,14 +29,14 @@ Route::middleware(['web', 'guest'])->group(function () {
 Route::middleware(['web'])->group(function () {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 });
+// PDF
+Route::get('pdf', 'Admin\PdfController@geraPdf');
 //Contratos
 Route::get('/contracts/index', 'Admin\ContractsController@index')->name('admin.contracts.index');
 Route::get('/contracts/contract/lista', 'Admin\ContractsController@list')->name('admin.contracts.contract.list');
 Route::get('/contracts/contract/novo', 'Admin\ContractsController@create')->name('admin.contracts.contract.novo');
-Route::get('/contracts/editcontract/{id}', 'Admin\ContractsController@edit');
 Route::post('/contracts/contract/salvar', 'Admin\ContractsController@store')->name('admin.contracts.contract.salvar');
-Route::patch('/contracts/contract/{id}/atualizar', 'Admin\ContractsController@update')->name('admin.contracts.contract.atualizar');
-Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@destroy')->name('admin.contracts.contract.deletar');
+Route::delete('/contracts/contract/{id}', 'Admin\ContractsController@destroy');
 
 // Landing-page
 Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');

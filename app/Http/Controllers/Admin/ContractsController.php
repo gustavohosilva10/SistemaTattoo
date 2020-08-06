@@ -93,7 +93,10 @@ class ContractsController extends Controller
 
     public function destroy($id)
     {
-        $text_contract = Contract::find($id);
-        return response()->json(['text_contract' => $text_contract->delete()]);
+
+        $contract = Contract::find($id);
+        $contract->delete();
+
+        return Redirect::to('/contracts/index');
     }
 }
