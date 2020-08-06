@@ -93,8 +93,12 @@
 
     </main>
 
-    <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
 </body>
 </html>
 
+<script>
+  $('#telephone_bibliography').inputmask({
+   mask: '(99) 9999.99999'
+});
+</script>
 @stop
