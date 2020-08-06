@@ -2,7 +2,11 @@
 
 @section('title', 'Contrato')
 @section('content')
-
+<style>
+    *{
+        table-layout:fixed;
+    }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -20,7 +24,7 @@
                     @else
                     @endif
                 </div>
-                <div class="card-body">
+                <div class="card-body" >
 
                     @if (Session::has('mensagem_sucesso'))
                     <div class="alert alert-success" role="alert" style="color:#000 !important;">
@@ -33,14 +37,14 @@
                     </div>
                     @endif
 
-                    <table class="table table-bordered" id="tableDefault" style="width:100%">
+                    <table class="table table-bordered" id="tableDefault" style="width:100% ">
                         <thead>
                             <tr>
                                 <td>Contrato
                                     @if(empty(isset($contract->text_contract)))
                                     <p>Não possui um contrato</p>
                                     @else
-                                    <p > {!!$contract->text_contract!!} </p>
+                                    <p> {!!$contract->text_contract!!} </p>
                                     @endif
                                 </td>
                                 <td class="align-middle">
@@ -63,4 +67,8 @@
         </div>
     </div>
 </div>
+
+<script>
+    $("#basic-btn tr td").css("white-space","pre-wrap");
+</script>
 @stop

@@ -19,7 +19,7 @@
                 <div class="form-group col-md-12">
                     
                     <legend> Regulamento do tatuador </legend>
-                    <textarea id="summernote" id="text_contract" name="text_contract">{{@$contract->text_contract}}</textarea>
+                    <textarea id="summernote" id="text_contract" name="text_contract" style="word-wrap: break-word;">{{@$contract->text_contract}}</textarea>
                     
                 </div>
                 </div>
