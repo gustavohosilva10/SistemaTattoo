@@ -62,10 +62,12 @@ class ContractsController extends Controller
     public function edit($id)
     {
 
-        $contract = Contract::findOrFail($id);
+        $contract = Contract::find($id);
+        if (isset($contract)) {
+            return view('/contracts/editcontract', compact('contract'));
+        }
 
-        return view('admin.contracts.contract')
-            ->with('contract', $contract);
+        return Redirect::to('/contracts/index');
     }
 
     public function update(Request $request, $id)

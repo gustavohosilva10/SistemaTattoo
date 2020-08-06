@@ -41,7 +41,7 @@
                                 </td>
                                 
                                 <td class="align-middle">
-                                    <a href="/contracts/contract/novo" data-toggle="tooltip"
+                                    <a href='/contracts/editcontract/{{$contract->id}}' data-toggle="tooltip"
                                         data-placement="bottom" title="Editar contato">
                                         <i class="fas fa-pen-square text-warning" style="font-size:1.5em"></i>
                                     </a>

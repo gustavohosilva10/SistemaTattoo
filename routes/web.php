@@ -33,7 +33,7 @@ Route::middleware(['web'])->group(function () {
 Route::get('/contracts/index', 'Admin\ContractsController@index')->name('admin.contracts.index');
 Route::get('/contracts/contract/lista', 'Admin\ContractsController@list')->name('admin.contracts.contract.list');
 Route::get('/contracts/contract/novo', 'Admin\ContractsController@create')->name('admin.contracts.contract.novo');
-Route::get('/contracts/contract/{id}/editar', 'Admin\ContractsController@edit')->name('admin.contracts.contract.editar');
+Route::get('/contracts/editcontract/{id}', 'Admin\ContractsController@edit');
 Route::post('/contracts/contract/salvar', 'Admin\ContractsController@store')->name('admin.contracts.contract.salvar');
 Route::patch('/contracts/contract/{id}/atualizar', 'Admin\ContractsController@update')->name('admin.contracts.contract.atualizar');
 Route::delete('/contracts/contract/{id}/delete', 'Admin\ContractsController@destroy')->name('admin.contracts.contract.deletar');
