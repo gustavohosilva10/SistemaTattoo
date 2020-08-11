@@ -34,7 +34,7 @@ Route::middleware(['web'])->group(function () {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 });
 // PDF
-Route::get('pdf', 'Admin\PdfController@geraPdf');
+Route::get('pdf/{id_contact}', 'Admin\PdfController@geraPdf');
 //Contratos
 Route::get('/contracts/index', 'Admin\ContractsController@index')->name('admin.contracts.index');
 Route::get('/contracts/contract/lista', 'Admin\ContractsController@list')->name('admin.contracts.contract.list');
