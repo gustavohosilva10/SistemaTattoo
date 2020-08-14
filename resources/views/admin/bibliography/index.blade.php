@@ -32,8 +32,8 @@
             </div>
             <div class="row">
             <div class="form-group  col-md-3 ">
-              <label for="telephone_bibliography">Telefone</label>
-              <input class="form-control" id="telephone_bibliography" name="telephone_bibliography" rows="3" required></input>
+              <label for="telephone_bibliography">Telefone (dd + numero)</label>
+              <input class="form-control" id="telephone_bibliography" name="telephone_bibliography" rows="3" required maxlength="11"></input>
             </div>
             </div>
             <div class="custom-file">
@@ -96,9 +96,4 @@
 </body>
 </html>
 
-<script>
-  $('#telephone_bibliography').inputmask({
-   mask: '(99) 9999.99999'
-});
-</script>
 @stop
