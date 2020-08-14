@@ -59,7 +59,7 @@
 
   <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
     <div class="site-logo">
-      <a href="index.html">Menu</a>
+      <a href="#section-home">Menu</a>
     </div>
     
     <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
@@ -147,10 +147,8 @@
       <div class="row justify-content-center">
         <div class="col-md-12 text-center py-5">
           <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+           
+          </p>
         </div>
       </div>
     </div>

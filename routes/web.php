@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
+
+//Site
 Route::get('index', 'Admin\RostoController@index')->name('index');
+
+//Lodin
 Route::get('/', function () {
     if (Auth::guest()) {
         return view('auth.login');
@@ -30,7 +34,7 @@ Route::middleware(['web'])->group(function () {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 });
 // PDF
-Route::get('pdf', 'Admin\PdfController@geraPdf');
+Route::get('pdf/{id_contact}', 'Admin\PdfController@geraPdf');
 //Contratos
 Route::get('/contracts/index', 'Admin\ContractsController@index')->name('admin.contracts.index');
 Route::get('/contracts/contract/lista', 'Admin\ContractsController@list')->name('admin.contracts.contract.list');
@@ -40,16 +44,17 @@ Route::delete('/contracts/contract/{id}', 'Admin\ContractsController@destroy');
 
 // Landing-page
 Route::get('/pageprincipal/index', 'Admin\PageprincipalsController@index')->name('admin.pageprincipal.index');
-Route::post('/pageprincipal/pageprincipal/salvar', 'Admin\PageprincipalsController@store')->name('admin.pageprincipal.pageprincipal.salvar');
 
 //Inicio
 Route::get('/welcome/index', 'Admin\WelcomeController@index')->name('admin.welcome.index');
 Route::post('/welcome/index', 'Admin\WelcomeController@store');
 Route::delete('/welcome/index/{id}', 'Admin\WelcomeController@destroy');
+
 //Photos
 Route::get('/photos/index', 'Admin\PhotosController@index')->name('admin.photos.index');
 Route::post('/photos/index', 'Admin\PhotosController@store');
 Route::delete('/photos/index/{id}', 'Admin\PhotosController@destroy');
+
 //Bibliografia
 Route::get('/bibliography/index', 'Admin\BibliographyController@index')->name('admin.bibliography.index');
 Route::post('/bibliography/index', 'Admin\BibliographyController@store');
@@ -81,7 +86,7 @@ Route::middleware(['auth', 'web'])->group(function () {
                 Route::post('salvar', 'Admin\ContactsController@storeTattoo')->name('storeTattoo');
                 Route::get('{id}/excluir', 'Admin\ContactsController@destroyTattoo')->name('destroyTattoo');
             });
-            // Session
+            // Sessoes
             Route::name('session.')->prefix('session')->group(function () {
                 Route::post('salvar', 'Admin\ContactsController@storeSession')->name('storeSession');
                 Route::get('{id}/excluir', 'Admin\ContactsController@destroySession')->name('destroySession');
