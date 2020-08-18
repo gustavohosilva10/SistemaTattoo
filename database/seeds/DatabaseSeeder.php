@@ -23,7 +23,6 @@ class DatabaseSeeder extends Seeder
         User::firstOrCreate([
             'email' => 'admin@tattoo.com',
             'name' => 'Admin',
-            'password' => bcrypt('TattooTestLaravel')
             'password' => bcrypt($password),
         ]);
 
