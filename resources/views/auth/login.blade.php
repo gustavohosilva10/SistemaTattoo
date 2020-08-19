@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center">
-                <img src="{{ asset('images/logo-trusttattoo.png') }}" alt="Trust Tattoo" class="mt-5 mb-5" />
+                <img src="{{ asset('images/logo.png') }}" height="250" width="250" />
             </div>
             <div class="card text-dark bg-secondary border-dark shadow-lg">
                 <div class="card-header text-light text-uppercase bg-dark font-weight-bold">Entrar no Sistema</div>
