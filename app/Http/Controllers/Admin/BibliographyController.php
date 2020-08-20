@@ -18,7 +18,7 @@ class BibliographyController extends Controller
     public function index()
     {
         $bibliography = Bibliography::all();
-        return view('admin.bibliography.index', compact(['bibliography']));
+        return view('admin.bibliography.index', compact(['bibliography', $bibliography]));
     }
 
     /**
