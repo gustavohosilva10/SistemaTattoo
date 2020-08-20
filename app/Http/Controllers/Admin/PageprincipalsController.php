@@ -9,6 +9,8 @@ use TattooOpen\Http\Controllers\Controller;
 class PageprincipalsController extends Controller
 {
 
+    protected $pageprincipal;
+
     public function index()
     {
         $pageprincipal = Pageprincipals::first();
