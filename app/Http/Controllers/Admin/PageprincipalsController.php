@@ -5,12 +5,9 @@ namespace TattooOpen\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Redirect;
 use TattooOpen\Http\Controllers\Controller;
-use TattooOpen\Pageprincipals;
 
 class PageprincipalsController extends Controller
 {
-
-    protected $pageprincipal;
 
     public function index()
     {
