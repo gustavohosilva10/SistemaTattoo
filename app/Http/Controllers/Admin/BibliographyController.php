@@ -5,7 +5,7 @@ namespace TattooOpen\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Redirect;
 use Storage;
-use TattooOpen\Bibliography;
+use TattooOpen\bibliography;
 use TattooOpen\Http\Controllers\Controller;
 
 class BibliographyController extends Controller
@@ -17,7 +17,7 @@ class BibliographyController extends Controller
      */
     public function index()
     {
-        $bibliography = Bibliography::all();
+        $bibliography = bibliography::all();
         return view('admin.bibliography.index', compact(['bibliography', $bibliography]));
     }
 
