@@ -13,8 +13,7 @@ class PageprincipalsController extends Controller
 
     public function index()
     {
-        $pageprincipal = Pageprincipals::first();
-        return view('admin.pageprincipal.index')->with('pageprincipal', $pageprincipal);
+        return view('admin.pageprincipal.index');
 
     }
 
