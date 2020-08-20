@@ -6,21 +6,21 @@ use Illuminate\Http\Request;
 use Redirect;
 use Storage;
 use TattooOpen\Http\Controllers\Controller;
-use TattooOpen\Posts;
+use TattooOpen\posts;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Posts::all();
-        return view('admin.postes.index', compact(['posts']));
+        $posts = posts::all();
+        return view('admin.postes.index', compact(['posts', $posts]));
     }
 
     public function store(Request $request)
     {
         $path = $request->file('arquivo')->store('imagens', 'public');
 
-        $post = new Posts();
+        $post = new posts();
         $post->desciption_promotion = $request->input('desciption_promotion');
         $post->arquivo = $path;
 
@@ -31,7 +31,7 @@ class PostController extends Controller
 
     public function destroy($id)
     {
-        $post = Posts::find($id);
+        $post = posts::find($id);
         if (isset($post)) {
             Storage::disk('public')->delete($post->arquivo);
             $post->delete();
@@ -41,7 +41,7 @@ class PostController extends Controller
 
     public function download($id)
     {
-        $post = Posts::find($id);
+        $post = posts::find($id);
         if (isset($post)) {
             $path = Storage::disk('public')->getDriver()->getAdapter()->applyPathPrefix($post->arquivo);
             return response()->download($path);
