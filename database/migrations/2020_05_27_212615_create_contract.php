@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateContract extends Migration
 {
@@ -15,7 +15,7 @@ class CreateContract extends Migration
     {
         Schema::create('contract', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('text_contract')->nullable();
+            $table->longText('text_contract')->nullable();
 
             $table->timestamps();
         });
