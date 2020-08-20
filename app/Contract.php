@@ -12,8 +12,7 @@ class Contract extends Model
 
 
     public function withContact(){
-        return $this->hasMany('TattooOpen\Session','first_name', 'middle_name', 'last_name', 'avatar', 'birthday', 'gender', 'email', 'phone1',
-        'phone2', 'zip_code', 'address', 'complement', 'strict', 'city', 'state', 'number', 'register',);
+        return $this->hasMany('TattooOpen\Session','first_name', 'middle_name', 'last_name', 'avatar', 'birthday', 'gender', 'email', 'phone1','phone2', 'zip_code', 'address', 'complement', 'strict', 'city', 'state', 'number', 'register');
     }
 
 }
