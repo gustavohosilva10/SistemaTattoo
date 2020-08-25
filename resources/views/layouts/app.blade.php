@@ -56,7 +56,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" data-toggle="tooltip" data-placement="bottom" title="Clique para sair">
-                                Olá, {{ Auth::user()->name }} <i class="fas fa-sign-out-alt"></i>
+                            Sair, {{ Auth::user()->name }} <i class="fas fa-sign-out-alt"></i>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
