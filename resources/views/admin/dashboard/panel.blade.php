@@ -118,7 +118,7 @@
     <div class="row mb-4">
         <div class="col-md-12">
             <div class="card text-dark border-dark shadow">
-                <div class="card-header text-light text-uppercase bg-dark font-weight-bold">Agenda Semana</div>
+                <div class="card-header text-light text-uppercase bg-dark font-weight-bold">Agenda da Semana</div>
                 @if ($data['sessionWeek'])
                     <div class="card-body py-0 px-0">
                         <div class="table-responsive">
