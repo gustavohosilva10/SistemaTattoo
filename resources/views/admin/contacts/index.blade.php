@@ -71,7 +71,7 @@
                                                 </a>
                                                 
                                                 <a href="{{ route('admin.contacts.show', $contact->id) }}" data-toggle="tooltip" data-placement="bottom" title="Ver contato">
-                                                    <i class="fas fa-caret-square-right text-success" style="font-size:1.5em"></i>
+                                                    <i class="far fa-address-book"style="font-size:1.5em"></i>
                                                 </a>
                                                 <a href="{{ route('admin.contacts.edit', $contact->id) }}" data-toggle="tooltip" data-placement="bottom" title="Editar contato">
                                                     <i class="fas fa-pen-square text-warning" style="font-size:1.5em"></i>
